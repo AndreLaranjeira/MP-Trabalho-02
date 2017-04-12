@@ -9,15 +9,15 @@ TEST (romanNumberConversion, invalidLength) {
 
     strcpy(name, "IIIIIIIIIIAIIIIIIIIIIAIIIIIIIIIIIIA");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode(1), "");
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidLength) ), "");
 
 }
 
-TEST (romanNumberConversion, invalidArgument) {
+TEST (romanNumberConversion, invalidCharacter) {
 
     strcpy(name, "A");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode(2), "");
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidCharacter) ), "");
 
 }
 
