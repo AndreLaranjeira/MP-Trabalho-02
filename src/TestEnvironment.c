@@ -45,6 +45,14 @@ TEST (romanNumberConversion, III) {
 
 }
 
+TEST (romanNumberConversion, IIII) {
+
+    strcpy(name, "IIII");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidCharacter) ), "");
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);

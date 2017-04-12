@@ -4,12 +4,12 @@
 
 int romanNumberConversion (char *roman) {
 
-    char c;
-    unsigned int i;
+    char c, last = '0';
+    unsigned int i, lastCount;
     int sum = 0;
 
     if (strlen(roman) > 30)
-        exit (1);
+        exit(1);
 
     for (i = 0; i < strlen(roman); i++) {
 
@@ -22,7 +22,22 @@ int romanNumberConversion (char *roman) {
                 break;
 
             default:
-                exit (2);
+                exit(2);
+
+        }
+
+        if (c != last) {
+            last = c;
+            lastCount = 1;
+        }
+
+        else {
+
+            if (lastCount != 3)
+                lastCount++;
+
+            else
+                exit(2);
 
         }
 
