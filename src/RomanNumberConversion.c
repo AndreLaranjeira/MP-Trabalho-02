@@ -1,7 +1,13 @@
 // Function that converts roman numbers to integers.
 
+#include "RomanNumberConversion.h"
+
 int romanNumberConversion (char *roman) {
 
-    return 0;
+    if(strcmp(roman, "I") == 0)
+        return 1;
+
+    else
+        return 0;
 
 }
