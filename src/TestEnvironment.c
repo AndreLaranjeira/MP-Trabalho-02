@@ -5,6 +5,22 @@
 
 char name[30];
 
+TEST (romanNumberConversion, invalidLength) {
+
+    strcpy(name, "IIIIIIIIIIAIIIIIIIIIIAIIIIIIIIIIIIA");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode(1), "");
+
+}
+
+TEST (romanNumberConversion, invalidArgument) {
+
+    strcpy(name, "A");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode(2), "");
+
+}
+
 TEST (romanNumberConversion, I) {
 
     strcpy(name, "I");
@@ -26,14 +42,6 @@ TEST (romanNumberConversion, III) {
     strcpy(name, "III");
 
     EXPECT_EQ ((romanNumberConversion(name) == 3), 1);
-
-}
-
-TEST (romanNumberConversion, invalidArgument) {
-
-    strcpy(name, "A");
-
-    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 

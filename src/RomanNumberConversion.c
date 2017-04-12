@@ -8,6 +8,9 @@ int romanNumberConversion (char *roman) {
     unsigned int i;
     int sum = 0;
 
+    if (strlen(roman) > 30)
+        exit (1);
+
     for (i = 0; i < strlen(roman); i++) {
 
         c = roman[i];
@@ -19,13 +22,9 @@ int romanNumberConversion (char *roman) {
                 break;
 
             default:
-                sum = -1;
-                break;
+                exit (2);
 
         }
-
-        if(sum == -1)
-            break;
 
     }
 
