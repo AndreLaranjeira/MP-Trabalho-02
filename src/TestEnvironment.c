@@ -53,6 +53,14 @@ TEST (romanNumberConversion, Four_Repetitions) {
 
 }
 
+TEST (romanNumberConversion, IV) {
+
+    strcpy(name, "IV");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 4), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
