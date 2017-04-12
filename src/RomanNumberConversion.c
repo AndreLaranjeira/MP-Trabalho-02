@@ -4,10 +4,31 @@
 
 int romanNumberConversion (char *roman) {
 
-    if(strcmp(roman, "I") == 0)
-        return 1;
+    char c;
+    unsigned int i;
+    int sum = 0;
 
-    else
-        return 0;
+    for (i = 0; i < strlen(roman); i++) {
+
+        c = roman[i];
+
+        switch (c) {
+
+            case 'I':
+                sum += 1;
+                break;
+
+            default:
+                sum = -1;
+                break;
+
+        }
+
+        if(sum == -1)
+            break;
+
+    }
+
+    return sum;
 
 }

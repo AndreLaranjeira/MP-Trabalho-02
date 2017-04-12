@@ -11,6 +11,12 @@ TEST (romanNumberConversion, I) {
 
 }
 
+TEST (romanNumberConversion, II) {
+
+    EXPECT_EQ ((romanNumberConversion(two) == 2), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
