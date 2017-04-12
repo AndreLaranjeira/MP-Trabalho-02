@@ -3,29 +3,37 @@
 #include "gtest/gtest.h"
 #include "RomanNumberConversion.h"
 
-char one[30] = "I", two[30] = "II", three[30] = "III", invalid[30] = "A";
+char name[30];
 
 TEST (romanNumberConversion, I) {
 
-    EXPECT_EQ ((romanNumberConversion(one) == 1), 1);
+    strcpy(name, "I");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 1), 1);
 
 }
 
 TEST (romanNumberConversion, II) {
 
-    EXPECT_EQ ((romanNumberConversion(two) == 2), 1);
+    strcpy(name, "II");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 2), 1);
 
 }
 
 TEST (romanNumberConversion, III) {
 
-    EXPECT_EQ ((romanNumberConversion(three) == 3), 1);
+    strcpy(name, "III");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 3), 1);
 
 }
 
 TEST (romanNumberConversion, invalidArgument) {
 
-    EXPECT_EQ ((romanNumberConversion(invalid) == -1), 1);
+    strcpy(name, "A");
+
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
