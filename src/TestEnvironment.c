@@ -5,7 +5,7 @@
 
 char name[30];
 
-TEST (romanNumberConversion, invalidLength) {
+TEST (romanNumberConversion, Invalid_Length) {
 
     strcpy(name, "IIIIIIIIIIAIIIIIIIIIIAIIIIIIIIIIIIA");
 
@@ -13,7 +13,7 @@ TEST (romanNumberConversion, invalidLength) {
 
 }
 
-TEST (romanNumberConversion, invalidCharacter) {
+TEST (romanNumberConversion, Invalid_Character) {
 
     strcpy(name, "A");
 
@@ -45,7 +45,7 @@ TEST (romanNumberConversion, III) {
 
 }
 
-TEST (romanNumberConversion, IIII) {
+TEST (romanNumberConversion, Four_Repetitions) {
 
     strcpy(name, "IIII");
 
