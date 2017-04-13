@@ -69,6 +69,9 @@ int charValue (char c) {
         case 'V':
             return 5;
 
+        case 'X':
+            return 10;
+
         default:
             return -1;
 
