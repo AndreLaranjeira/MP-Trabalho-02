@@ -7,7 +7,7 @@
 typedef enum {
     working,
     invalidLength,
-    invalidCharacter
+    invalidArgument
 } romanExitConditions;
 
 int romanNumberConversion (char *);

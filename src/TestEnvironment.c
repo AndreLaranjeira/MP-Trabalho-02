@@ -17,7 +17,7 @@ TEST (romanNumberConversion, Invalid_Character) {
 
     strcpy(name, "A");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidCharacter) ), "");
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
 }
 
@@ -49,7 +49,7 @@ TEST (romanNumberConversion, Four_Repetitions) {
 
     strcpy(name, "IIII");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidCharacter) ), "");
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
 }
 
@@ -74,6 +74,14 @@ TEST (romanNumberConversion, VIII) {
     strcpy(name, "VIII");
 
     EXPECT_EQ ((romanNumberConversion(name) == 8), 1);
+
+}
+
+TEST (romanNumberConversion, Two_Characters_Before_A_Bigger_Character) {
+
+    strcpy(name, "IIV");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
 }
 
