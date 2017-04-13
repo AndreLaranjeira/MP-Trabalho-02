@@ -10,6 +10,7 @@ typedef enum {
     invalidArgument
 } romanExitConditions;
 
-int charValue (char);
 int romanNumberConversion (char *);
+int canBeRepeated (char);
+int charValue (char);
 int subtractionPrecedence (char, char);

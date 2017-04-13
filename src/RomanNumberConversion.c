@@ -2,29 +2,6 @@
 
 #include "RomanNumberConversion.h"
 
-int charValue (char c) {
-
-    switch (c) {
-
-        case 'I':
-            return 1;
-
-        case 'V':
-            return 5;
-
-        case 'X':
-            return 10;
-
-        case 'L':
-            return 50;
-
-        default:
-            return -1;
-
-    }
-
-}
-
 int romanNumberConversion (char *roman) {
 
     char c, last = '0';
@@ -68,7 +45,7 @@ int romanNumberConversion (char *roman) {
 
         else {
 
-            if (lastCount != 3)
+            if (canBeRepeated(c) && lastCount != 3)
                 lastCount++;
 
             else
@@ -79,6 +56,44 @@ int romanNumberConversion (char *roman) {
     }
 
     return sum;
+
+}
+
+int canBeRepeated (char c) {
+
+    int i = charValue(c);
+
+    while (i >= 10)
+        i = i/10;
+
+    if (i == 1)
+        return 1;
+
+    else
+        return 0;
+
+}
+
+int charValue (char c) {
+
+    switch (c) {
+
+        case 'I':
+            return 1;
+
+        case 'V':
+            return 5;
+
+        case 'X':
+            return 10;
+
+        case 'L':
+            return 50;
+
+        default:
+            return -1;
+
+    }
 
 }
 
