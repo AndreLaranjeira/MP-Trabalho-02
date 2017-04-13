@@ -134,7 +134,7 @@ TEST (romanNumberConversion, XIX) {
 }
 
 TEST (romanNumberConversion, Invalid_Character_Precedence) {
-    
+
     strcpy(name, "VX");
 
     EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
@@ -162,6 +162,14 @@ TEST (romanNumberConversion, XXIX) {
     strcpy(name, "XXIX");
 
     EXPECT_EQ ((romanNumberConversion(name) == 29), 1);
+
+}
+
+TEST (romanNumberConversion, Invalid_Precedence_After_Subtraction) {
+
+    strcpy(name, "XXIXX");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
 }
 
