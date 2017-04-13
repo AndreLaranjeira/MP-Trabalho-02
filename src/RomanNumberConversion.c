@@ -6,7 +6,7 @@ int romanNumberConversion (char *roman) {
 
     char current, last = '0', pastCharacters[30] = "";
     unsigned int iterator, lastCount;
-    int aux, sum = 0;
+    int auxiliary, sum = 0;
 
     if (strlen(roman) > 30)
         exit(1);
@@ -20,13 +20,13 @@ int romanNumberConversion (char *roman) {
 
         pastCharacters[iterator] = current;
 
-        aux = charValue(current);
+        auxiliary = charValue(current);
 
-        if(aux == -1)
+        if(auxiliary == -1)
             exit(2);
 
         else
-            sum += aux;
+            sum += auxiliary;
 
         if (current != last) {
 
@@ -37,11 +37,6 @@ int romanNumberConversion (char *roman) {
 
                 sum -= (2 * charValue(last));
 
-            }
-
-            else {
-                if ( (last != '0') && charValue(current) > charValue(last) )
-                    exit(2);
             }
 
             last = current;
@@ -79,9 +74,9 @@ int canBeRepeated (char c) {
 
 }
 
-int charValue (char c) {
+int charValue (char current) {
 
-    switch (c) {
+    switch (current) {
 
         case 'I':
             return 1;
