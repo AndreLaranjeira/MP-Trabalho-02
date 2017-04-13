@@ -109,6 +109,30 @@ TEST (romanNumberConversion, XIX) {
 
 }
 
+TEST (romanNumberConversion, XXIV) {
+
+    strcpy(name, "XXIV");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 24), 1);
+
+}
+
+TEST (romanNumberConversion, XXIX) {
+
+    strcpy(name, "XXIX");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 29), 1);
+
+}
+
+TEST (romanNumberConversion, XXXVIII) {
+
+    strcpy(name, "XXXVIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 38), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
