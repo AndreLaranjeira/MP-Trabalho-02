@@ -2,6 +2,29 @@
 
 #include "RomanNumberConversion.h"
 
+int charValue (char c) {
+
+    switch (c) {
+
+        case 'I':
+            return 1;
+
+        case 'V':
+            return 5;
+
+        case 'X':
+            return 10;
+
+        case 'L':
+            return 50;
+
+        default:
+            return -1;
+
+    }
+
+}
+
 int romanNumberConversion (char *roman) {
 
     char c, last = '0';
@@ -25,7 +48,7 @@ int romanNumberConversion (char *roman) {
 
         if (c != last) {
 
-            if ((charValue(c)/charValue(last)) == 5 || (charValue(c)/charValue(last)) == 10 ) {
+            if (subtractionPrecedence(last, c)) {
 
                 if (lastCount != 1)
                     exit(2);
@@ -59,25 +82,12 @@ int romanNumberConversion (char *roman) {
 
 }
 
-int charValue (char c) {
+int subtractionPrecedence (char before, char after) {
 
-    switch (c) {
+    if ( (charValue(after)/charValue(before)) == 5 || (charValue(after)/charValue(before)) == 10 )
+        return 1;
 
-        case 'I':
-            return 1;
-
-        case 'V':
-            return 5;
-
-        case 'X':
-            return 10;
-
-        case 'L':
-            return 50;
-
-        default:
-            return -1;
-
-    }
+    else
+        return 0;
 
 }

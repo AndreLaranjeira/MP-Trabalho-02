@@ -93,6 +93,14 @@ TEST (romanNumberConversion, Three_Characters_Before_A_Bigger_Character) {
 
 }
 
+TEST (romanNumberConversion, Invalid_Repetition) {
+
+    strcpy(name, "VV");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+
+}
+
 TEST (romanNumberConversion, IX) {
 
     strcpy(name, "IX");
