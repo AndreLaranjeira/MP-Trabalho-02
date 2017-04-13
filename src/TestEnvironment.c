@@ -141,6 +141,14 @@ TEST (romanNumberConversion, Invalid_Character_Precedence) {
 
 }
 
+TEST (romanNumberConversion, Invalid_Precedence_Before_Subtraction) {
+
+    strcpy(name, "VIX");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+
+}
+
 TEST (romanNumberConversion, XXIV) {
 
     strcpy(name, "XXIV");
