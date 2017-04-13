@@ -85,6 +85,14 @@ TEST (romanNumberConversion, Two_Characters_Before_A_Bigger_Character) {
 
 }
 
+TEST (romanNumberConversion, Three_Characters_Before_A_Bigger_Character) {
+
+    strcpy(name, "IIIV");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+
+}
+
 TEST (romanNumberConversion, IX) {
 
     strcpy(name, "IX");
@@ -114,6 +122,14 @@ TEST (romanNumberConversion, XIX) {
     strcpy(name, "XIX");
 
     EXPECT_EQ ((romanNumberConversion(name) == 19), 1);
+
+}
+
+TEST (romanNumberConversion, Invalid_Character_Precedence) {
+
+    strcpy(name, "VX");
+
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
 }
 
