@@ -24,6 +24,21 @@ int romanNumberConversion (char *roman) {
             sum += aux;
 
         if (c != last) {
+
+            if ((charValue(c)/charValue(last)) == 5 || (charValue(c)/charValue(last)) == 10 ) {
+
+                if (lastCount != 1)
+                    exit(2);
+
+                sum -= (2 * charValue(last));
+
+            }
+
+            else {
+                if (last != '0')
+                    exit(2);
+            }
+
             last = c;
             lastCount = 1;
         }
@@ -50,6 +65,9 @@ int charValue (char c) {
 
         case 'I':
             return 1;
+
+        case 'V':
+            return 5;
 
         default:
             return -1;
