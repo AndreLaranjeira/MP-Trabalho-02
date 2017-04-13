@@ -61,6 +61,22 @@ TEST (romanNumberConversion, IV) {
 
 }
 
+TEST (romanNumberConversion, V) {
+
+    strcpy(name, "V");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 5), 1);
+
+}
+
+TEST (romanNumberConversion, VIII) {
+
+    strcpy(name, "VIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 8), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);

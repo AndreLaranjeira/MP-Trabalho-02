@@ -35,7 +35,7 @@ int romanNumberConversion (char *roman) {
             }
 
             else {
-                if (last != '0')
+                if ( (last != '0') && charValue(c) > charValue(last) )
                     exit(2);
             }
 
