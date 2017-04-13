@@ -4,18 +4,23 @@
 
 int romanNumberConversion (char *roman) {
 
-    char c, last = '0';
-    unsigned int i, lastCount;
+    char current, last = '0', pastCharacters[30] = "";
+    unsigned int iterator, lastCount;
     int aux, sum = 0;
 
     if (strlen(roman) > 30)
         exit(1);
 
-    for (i = 0; i < strlen(roman); i++) {
+    for (iterator = 0; iterator < strlen(roman); iterator++) {
 
-        c = roman[i];
+        current = roman[iterator];
 
-        aux = charValue(c);
+        if( !(validPrecedences(pastCharacters, current)) )
+            exit(2);
+
+        pastCharacters[iterator] = current;
+
+        aux = charValue(current);
 
         if(aux == -1)
             exit(2);
@@ -23,9 +28,9 @@ int romanNumberConversion (char *roman) {
         else
             sum += aux;
 
-        if (c != last) {
+        if (current != last) {
 
-            if (subtractionPrecedence(last, c)) {
+            if (subtractionPrecedence(last, current)) {
 
                 if (lastCount != 1)
                     exit(2);
@@ -35,17 +40,17 @@ int romanNumberConversion (char *roman) {
             }
 
             else {
-                if ( (last != '0') && charValue(c) > charValue(last) )
+                if ( (last != '0') && charValue(current) > charValue(last) )
                     exit(2);
             }
 
-            last = c;
+            last = current;
             lastCount = 1;
         }
 
         else {
 
-            if (canBeRepeated(c) && lastCount != 3)
+            if (lastCount != 3)
                 lastCount++;
 
             else
@@ -61,12 +66,12 @@ int romanNumberConversion (char *roman) {
 
 int canBeRepeated (char c) {
 
-    int i = charValue(c);
+    int value = charValue(c);
 
-    while (i >= 10)
-        i = i/10;
+    while (value >= 10)
+        value = value/10;
 
-    if (i == 1)
+    if (value == 1)
         return 1;
 
     else
@@ -101,6 +106,52 @@ int subtractionPrecedence (char before, char after) {
 
     if ( (charValue(after)/charValue(before)) == 5 || (charValue(after)/charValue(before)) == 10 )
         return 1;
+
+    else
+        return 0;
+
+}
+
+int validPrecedences (char *before, char after) {
+
+    unsigned int iterator;
+
+    if (strlen(before) == 0)
+        return 1;
+
+    for (iterator = 0; iterator < (strlen(before) - 1); iterator++) {
+
+        if ( (charValue(before[iterator])) < (charValue(after)) )
+            return 0;
+
+        else {
+
+            if ( (charValue(before[iterator])) == (charValue(after)) ) {
+
+                if ( !(canBeRepeated(after)) )
+                    return 0;
+
+            }
+
+        }
+
+    }
+
+    if ( subtractionPrecedence(before[iterator], after) )
+        return 1;
+
+    else if ( (charValue(before[iterator])) > (charValue(after)) )
+        return 1;
+
+    else if ( (charValue(before[iterator])) == (charValue(after)) ) {
+
+        if ( (canBeRepeated(after)) )
+            return 1;
+
+        else
+            return 0;
+
+    }
 
     else
         return 0;

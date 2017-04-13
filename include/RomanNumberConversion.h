@@ -14,3 +14,4 @@ int romanNumberConversion (char *);
 int canBeRepeated (char);
 int charValue (char);
 int subtractionPrecedence (char, char);
+int validPrecedences (char *, char);

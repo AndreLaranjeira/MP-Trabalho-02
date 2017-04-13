@@ -134,7 +134,7 @@ TEST (romanNumberConversion, XIX) {
 }
 
 TEST (romanNumberConversion, Invalid_Character_Precedence) {
-
+    
     strcpy(name, "VX");
 
     EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
