@@ -11,3 +11,4 @@ typedef enum {
 } romanExitConditions;
 
 int romanNumberConversion (char *);
+int charValue (char);

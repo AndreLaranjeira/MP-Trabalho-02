@@ -6,7 +6,7 @@ int romanNumberConversion (char *roman) {
 
     char c, last = '0';
     unsigned int i, lastCount;
-    int sum = 0;
+    int aux, sum = 0;
 
     if (strlen(roman) > 30)
         exit(1);
@@ -15,16 +15,13 @@ int romanNumberConversion (char *roman) {
 
         c = roman[i];
 
-        switch (c) {
+        aux = charValue(c);
 
-            case 'I':
-                sum += 1;
-                break;
+        if(aux == -1)
+            exit(2);
 
-            default:
-                exit(2);
-
-        }
+        else
+            sum += aux;
 
         if (c != last) {
             last = c;
@@ -44,5 +41,19 @@ int romanNumberConversion (char *roman) {
     }
 
     return sum;
+
+}
+
+int charValue (char c) {
+
+    switch (c) {
+
+        case 'I':
+            return 1;
+
+        default:
+            return -1;
+
+    }
 
 }
