@@ -126,6 +126,13 @@ int validPrecedences (char *before, char after) {
                 if ( !(canBeRepeated(after)) )
                     return 0;
 
+                if ( subtractionPrecedence(before[iterator], before[iterator + 1]) ) {
+
+                    if ( !(subtractionPrecedence(before[(strlen(before) - 1)], after)) )
+                        return 0;
+
+                }
+
             }
 
         }

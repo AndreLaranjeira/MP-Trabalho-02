@@ -213,15 +213,13 @@ TEST (romanNumberConversion, XLIX) {
 
 }
 
-/*
-
 TEST (romanNumberConversion, Invalid_Precedence_Due_To_Subtraction) {
 
     strcpy(name, "XLX");
 
-    EXPECT_EQ ((romanNumberConversion(name) == 40), 1);
+    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
 
-} */
+}
 
 int main(int argc, char **argv) {
 
