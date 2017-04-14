@@ -13,7 +13,7 @@ int romanNumberConversion (char *roman) {
 
     for (iterator = 0; iterator < strlen(roman); iterator++) {
 
-        current = roman[iterator];
+        current = toupper(roman[iterator]);
 
         if( !(validPrecedences(pastCharacters, current)) )
             exit(2);

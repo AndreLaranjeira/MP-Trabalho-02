@@ -293,6 +293,14 @@ TEST (romanNumberConversion, 338) {
 
 }
 
+TEST (romanNumberConversion, Lower_Case_Letters) {
+
+    strcpy(name, "CcCxxXviiI");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 338), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
