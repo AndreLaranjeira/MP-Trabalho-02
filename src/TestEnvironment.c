@@ -349,6 +349,14 @@ TEST (romanNumberConversion, 888) {
 
 }
 
+TEST (romanNumberConversion, 900) {
+
+    strcpy(name, "CM");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 900), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
