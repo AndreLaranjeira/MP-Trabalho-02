@@ -253,6 +253,46 @@ TEST (romanNumberConversion, 90) {
 
 }
 
+TEST (romanNumberConversion, 99) {
+
+    strcpy(name, "XCIX");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 99), 1);
+
+}
+
+TEST (romanNumberConversion, 111) {
+
+    strcpy(name, "CXI");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 111), 1);
+
+}
+
+TEST (romanNumberConversion, 203) {
+
+    strcpy(name, "CCIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 203), 1);
+
+}
+
+TEST (romanNumberConversion, 247) {
+
+    strcpy(name, "CCXLVII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 247), 1);
+
+}
+
+TEST (romanNumberConversion, 338) {
+
+    strcpy(name, "CCCXXXVIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 338), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
