@@ -21,7 +21,7 @@ TEST (romanNumberConversion, Invalid_Character) {
 
 }
 
-TEST (romanNumberConversion, I) {
+TEST (romanNumberConversion, 01) {
 
     strcpy(name, "I");
 
@@ -29,7 +29,7 @@ TEST (romanNumberConversion, I) {
 
 }
 
-TEST (romanNumberConversion, II) {
+TEST (romanNumberConversion, 02) {
 
     strcpy(name, "II");
 
@@ -37,7 +37,7 @@ TEST (romanNumberConversion, II) {
 
 }
 
-TEST (romanNumberConversion, III) {
+TEST (romanNumberConversion, 03) {
 
     strcpy(name, "III");
 
@@ -53,7 +53,7 @@ TEST (romanNumberConversion, Four_Repetitions) {
 
 }
 
-TEST (romanNumberConversion, IV) {
+TEST (romanNumberConversion, 04) {
 
     strcpy(name, "IV");
 
@@ -61,7 +61,7 @@ TEST (romanNumberConversion, IV) {
 
 }
 
-TEST (romanNumberConversion, V) {
+TEST (romanNumberConversion, 05) {
 
     strcpy(name, "V");
 
@@ -69,7 +69,7 @@ TEST (romanNumberConversion, V) {
 
 }
 
-TEST (romanNumberConversion, VIII) {
+TEST (romanNumberConversion, 08) {
 
     strcpy(name, "VIII");
 
@@ -101,7 +101,7 @@ TEST (romanNumberConversion, Invalid_Repetition) {
 
 }
 
-TEST (romanNumberConversion, IX) {
+TEST (romanNumberConversion, 09) {
 
     strcpy(name, "IX");
 
@@ -109,7 +109,7 @@ TEST (romanNumberConversion, IX) {
 
 }
 
-TEST (romanNumberConversion, XIV) {
+TEST (romanNumberConversion, 14) {
 
     strcpy(name, "XIV");
 
@@ -117,7 +117,7 @@ TEST (romanNumberConversion, XIV) {
 
 }
 
-TEST (romanNumberConversion, XVIII) {
+TEST (romanNumberConversion, 18) {
 
     strcpy(name, "XVIII");
 
@@ -125,7 +125,7 @@ TEST (romanNumberConversion, XVIII) {
 
 }
 
-TEST (romanNumberConversion, XIX) {
+TEST (romanNumberConversion, 19) {
 
     strcpy(name, "XIX");
 
@@ -149,7 +149,7 @@ TEST (romanNumberConversion, Invalid_Precedence_Before_Subtraction) {
 
 }
 
-TEST (romanNumberConversion, XXIV) {
+TEST (romanNumberConversion, 24) {
 
     strcpy(name, "XXIV");
 
@@ -157,7 +157,7 @@ TEST (romanNumberConversion, XXIV) {
 
 }
 
-TEST (romanNumberConversion, XXIX) {
+TEST (romanNumberConversion, 29) {
 
     strcpy(name, "XXIX");
 
@@ -173,7 +173,7 @@ TEST (romanNumberConversion, Invalid_Precedence_After_Subtraction) {
 
 }
 
-TEST (romanNumberConversion, XXXVIII) {
+TEST (romanNumberConversion, 38) {
 
     strcpy(name, "XXXVIII");
 
@@ -181,7 +181,7 @@ TEST (romanNumberConversion, XXXVIII) {
 
 }
 
-TEST (romanNumberConversion, XL) {
+TEST (romanNumberConversion, 40) {
 
     strcpy(name, "XL");
 
@@ -189,7 +189,7 @@ TEST (romanNumberConversion, XL) {
 
 }
 
-TEST (romanNumberConversion, XLIV) {
+TEST (romanNumberConversion, 44) {
 
     strcpy(name, "XLIV");
 
@@ -197,7 +197,7 @@ TEST (romanNumberConversion, XLIV) {
 
 }
 
-TEST (romanNumberConversion, XLVIII) {
+TEST (romanNumberConversion, 48) {
 
     strcpy(name, "XLVIII");
 
@@ -205,7 +205,7 @@ TEST (romanNumberConversion, XLVIII) {
 
 }
 
-TEST (romanNumberConversion, XLIX) {
+TEST (romanNumberConversion, 49) {
 
     strcpy(name, "XLIX");
 
@@ -221,7 +221,7 @@ TEST (romanNumberConversion, Invalid_Precedence_Due_To_Subtraction) {
 
 }
 
-TEST (romanNumberConversion, LVIII) {
+TEST (romanNumberConversion, 58) {
 
     strcpy(name, "LVIII");
 
@@ -229,7 +229,7 @@ TEST (romanNumberConversion, LVIII) {
 
 }
 
-TEST (romanNumberConversion, LXIX) {
+TEST (romanNumberConversion, 69) {
 
     strcpy(name, "LXIX");
 
@@ -237,7 +237,7 @@ TEST (romanNumberConversion, LXIX) {
 
 }
 
-TEST (romanNumberConversion, LXXXVIII) {
+TEST (romanNumberConversion, 88) {
 
     strcpy(name, "LXXXVIII");
 
@@ -245,7 +245,7 @@ TEST (romanNumberConversion, LXXXVIII) {
 
 }
 
-TEST (romanNumberConversion, XC) {
+TEST (romanNumberConversion, 90) {
 
     strcpy(name, "XC");
 
