@@ -245,6 +245,14 @@ TEST (romanNumberConversion, LXXXVIII) {
 
 }
 
+TEST (romanNumberConversion, XC) {
+
+    strcpy(name, "XC");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 90), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
