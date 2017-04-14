@@ -93,6 +93,9 @@ int charValue (char current) {
         case 'C':
             return 100;
 
+        case 'D':
+            return 500;
+
         default:
             return -1;
 
