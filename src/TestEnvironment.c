@@ -221,6 +221,30 @@ TEST (romanNumberConversion, Invalid_Precedence_Due_To_Subtraction) {
 
 }
 
+TEST (romanNumberConversion, LVIII) {
+
+    strcpy(name, "LVIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 58), 1);
+
+}
+
+TEST (romanNumberConversion, LXIX) {
+
+    strcpy(name, "LXIX");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 69), 1);
+
+}
+
+TEST (romanNumberConversion, LXXXVIII) {
+
+    strcpy(name, "LXXXVIII");
+
+    EXPECT_EQ ((romanNumberConversion(name) == 88), 1);
+
+}
+
 int main(int argc, char **argv) {
 
 ::testing::InitGoogleTest(&argc, argv);
