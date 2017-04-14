@@ -9,7 +9,7 @@ TEST (romanNumberConversion, Invalid_Length) {
 
     strcpy(name, "IIIIIIIIIIAIIIIIIIIIIAIIIIIIIIIIIIA");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidLength) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -17,7 +17,7 @@ TEST (romanNumberConversion, Invalid_Character) {
 
     strcpy(name, "A");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -49,7 +49,7 @@ TEST (romanNumberConversion, Four_Repetitions) {
 
     strcpy(name, "IIII");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -81,7 +81,7 @@ TEST (romanNumberConversion, Two_Characters_Before_A_Bigger_Character) {
 
     strcpy(name, "IIV");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -89,7 +89,7 @@ TEST (romanNumberConversion, Three_Characters_Before_A_Bigger_Character) {
 
     strcpy(name, "IIIV");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -97,7 +97,7 @@ TEST (romanNumberConversion, Invalid_Repetition) {
 
     strcpy(name, "VV");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -137,7 +137,7 @@ TEST (romanNumberConversion, Invalid_Character_Precedence) {
 
     strcpy(name, "VX");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -145,7 +145,7 @@ TEST (romanNumberConversion, Invalid_Precedence_Before_Subtraction) {
 
     strcpy(name, "VIX");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -169,7 +169,7 @@ TEST (romanNumberConversion, Invalid_Precedence_After_Subtraction) {
 
     strcpy(name, "XXIXX");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 
@@ -217,7 +217,7 @@ TEST (romanNumberConversion, Invalid_Precedence_Due_To_Subtraction) {
 
     strcpy(name, "XLX");
 
-    EXPECT_EXIT ({romanNumberConversion(name);}, ::testing::ExitedWithCode( romanExitConditions(invalidArgument) ), "");
+    EXPECT_EQ ((romanNumberConversion(name) == -1), 1);
 
 }
 

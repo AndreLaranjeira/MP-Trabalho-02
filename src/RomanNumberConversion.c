@@ -9,21 +9,21 @@ int romanNumberConversion (char *roman) {
     int auxiliary, sum = 0;
 
     if (strlen(roman) > 30)
-        exit(1);
+        return -1;
 
     for (iterator = 0; iterator < strlen(roman); iterator++) {
 
         current = toupper(roman[iterator]);
 
         if( !(validPrecedences(pastCharacters, current)) )
-            exit(2);
+            return -1;
 
         pastCharacters[iterator] = current;
 
         auxiliary = charValue(current);
 
         if(auxiliary == -1)
-            exit(2);
+            return -1;
 
         else
             sum += auxiliary;
@@ -33,7 +33,7 @@ int romanNumberConversion (char *roman) {
             if (subtractionPrecedence(last, current)) {
 
                 if (lastCount != 1)
-                    exit(2);
+                    return -1;
 
                 sum -= (2 * charValue(last));
 
@@ -49,7 +49,7 @@ int romanNumberConversion (char *roman) {
                 lastCount++;
 
             else
-                exit(2);
+                return -1;
 
         }
 
