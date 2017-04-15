@@ -1,9 +1,10 @@
 IDIR = ../include
 CC = g++
-CFLAGS = -Wall -I $(IDIR)
+CFLAGS = -Wall -ftest-coverage -fprofile-arcs -I $(IDIR)
 
 ODIR = obj
 LDIR = ../lib
+GCOVDIR = gcov
 
 LIBS = -lm -lgtest
 
@@ -18,6 +19,14 @@ $(ODIR)/%.o: %.c $(DEPS)
 
 romanmake: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: my_gcov
+
+mv_gcov:
+	mv $(ODIR)/*.gcda $(GCOVDIR)
+	mv $(ODIR)/*.gcno $(GCOVDIR)
+	cp $(IDIR)/$(_DEPS) $(GCOVDIR)
+	cp *.c $(GCOVDIR)
 
 .PHONY: clean
 

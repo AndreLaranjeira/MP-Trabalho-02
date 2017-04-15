@@ -1,0 +1,419 @@
+        -:    0:Source:test_environment.c
+        -:    0:Graph:test_environment.gcno
+        -:    0:Data:test_environment.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    0:Source is newer than graph
+        -:    1:// Ambiente de testes.
+        -:    2:
+        -:    3:#include "roman_number_conversion.h"
+        -:    4:#include "gtest/gtest.h"
+        -:    5:
+        -:    6:char name[30];
+        -:    7:
+        5:    8:TEST (RomanNumberConversion, Invalid_Length) {
+        -:    9:
+        1:   10:    strcpy(name, "IIIIIIIIIIAIIIIIIIIIIAIIIIIIIIIIIIA");
+        -:   11:
+        1:   12:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:   13:
+        1:   14:}
+        -:   15:
+        5:   16:TEST (RomanNumberConversion, Invalid_Character) {
+        -:   17:
+        1:   18:    strcpy(name, "A");
+        -:   19:
+        1:   20:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:   21:
+        1:   22:}
+        -:   23:
+        5:   24:TEST (RomanNumberConversion, 01) {
+        -:   25:
+        1:   26:    strcpy(name, "I");
+        -:   27:
+        1:   28:    EXPECT_EQ ((RomanNumberConversion(name) == 1), 1);
+        -:   29:
+        1:   30:}
+        -:   31:
+        5:   32:TEST (RomanNumberConversion, 02) {
+        -:   33:
+        1:   34:    strcpy(name, "II");
+        -:   35:
+        1:   36:    EXPECT_EQ ((RomanNumberConversion(name) == 2), 1);
+        -:   37:
+        1:   38:}
+        -:   39:
+        5:   40:TEST (RomanNumberConversion, 03) {
+        -:   41:
+        1:   42:    strcpy(name, "III");
+        -:   43:
+        1:   44:    EXPECT_EQ ((RomanNumberConversion(name) == 3), 1);
+        -:   45:
+        1:   46:}
+        -:   47:
+        5:   48:TEST (RomanNumberConversion, Four_Repetitions) {
+        -:   49:
+        1:   50:    strcpy(name, "IIII");
+        -:   51:
+        1:   52:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:   53:
+        1:   54:}
+        -:   55:
+        5:   56:TEST (RomanNumberConversion, 04) {
+        -:   57:
+        1:   58:    strcpy(name, "IV");
+        -:   59:
+        1:   60:    EXPECT_EQ ((RomanNumberConversion(name) == 4), 1);
+        -:   61:
+        1:   62:}
+        -:   63:
+        5:   64:TEST (RomanNumberConversion, 05) {
+        -:   65:
+        1:   66:    strcpy(name, "V");
+        -:   67:
+        1:   68:    EXPECT_EQ ((RomanNumberConversion(name) == 5), 1);
+        -:   69:
+        1:   70:}
+        -:   71:
+        5:   72:TEST (RomanNumberConversion, 08) {
+        -:   73:
+        1:   74:    strcpy(name, "VIII");
+        -:   75:
+        1:   76:    EXPECT_EQ ((RomanNumberConversion(name) == 8), 1);
+        -:   77:
+        1:   78:}
+        -:   79:
+        5:   80:TEST (RomanNumberConversion, Two_Characters_Before_A_Bigger_Character) {
+        -:   81:
+        1:   82:    strcpy(name, "IIV");
+        -:   83:
+        1:   84:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:   85:
+        1:   86:}
+        -:   87:
+        5:   88:TEST (RomanNumberConversion, Three_Characters_Before_A_Bigger_Character) {
+        -:   89:
+        1:   90:    strcpy(name, "IIIV");
+        -:   91:
+        1:   92:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:   93:
+        1:   94:}
+        -:   95:
+        5:   96:TEST (RomanNumberConversion, Invalid_Repetition) {
+        -:   97:
+        1:   98:    strcpy(name, "VV");
+        -:   99:
+        1:  100:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  101:
+        1:  102:}
+        -:  103:
+        5:  104:TEST (RomanNumberConversion, 09) {
+        -:  105:
+        1:  106:    strcpy(name, "IX");
+        -:  107:
+        1:  108:    EXPECT_EQ ((RomanNumberConversion(name) == 9), 1);
+        -:  109:
+        1:  110:}
+        -:  111:
+        5:  112:TEST (RomanNumberConversion, 14) {
+        -:  113:
+        1:  114:    strcpy(name, "XIV");
+        -:  115:
+        1:  116:    EXPECT_EQ ((RomanNumberConversion(name) == 14), 1);
+        -:  117:
+        1:  118:}
+        -:  119:
+        5:  120:TEST (RomanNumberConversion, 18) {
+        -:  121:
+        1:  122:    strcpy(name, "XVIII");
+        -:  123:
+        1:  124:    EXPECT_EQ ((RomanNumberConversion(name) == 18), 1);
+        -:  125:
+        1:  126:}
+        -:  127:
+        5:  128:TEST (RomanNumberConversion, 19) {
+        -:  129:
+        1:  130:    strcpy(name, "XIX");
+        -:  131:
+        1:  132:    EXPECT_EQ ((RomanNumberConversion(name) == 19), 1);
+        -:  133:
+        1:  134:}
+        -:  135:
+        5:  136:TEST (RomanNumberConversion, Invalid_Character_Precedence) {
+        -:  137:
+        1:  138:    strcpy(name, "VX");
+        -:  139:
+        1:  140:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  141:
+        1:  142:}
+        -:  143:
+        5:  144:TEST (RomanNumberConversion, Invalid_Precedence_Before_Subtraction) {
+        -:  145:
+        1:  146:    strcpy(name, "VIX");
+        -:  147:
+        1:  148:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  149:
+        1:  150:}
+        -:  151:
+        5:  152:TEST (RomanNumberConversion, Invalid_Repetition_After_Character) {
+        -:  153:
+        1:  154:    strcpy(name, "VIV");
+        -:  155:
+        1:  156:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  157:
+        1:  158:}
+        -:  159:
+        5:  160:TEST (RomanNumberConversion, 24) {
+        -:  161:
+        1:  162:    strcpy(name, "XXIV");
+        -:  163:
+        1:  164:    EXPECT_EQ ((RomanNumberConversion(name) == 24), 1);
+        -:  165:
+        1:  166:}
+        -:  167:
+        5:  168:TEST (RomanNumberConversion, 29) {
+        -:  169:
+        1:  170:    strcpy(name, "XXIX");
+        -:  171:
+        1:  172:    EXPECT_EQ ((RomanNumberConversion(name) == 29), 1);
+        -:  173:
+        1:  174:}
+        -:  175:
+        5:  176:TEST (RomanNumberConversion, Invalid_Precedence_After_Subtraction) {
+        -:  177:
+        1:  178:    strcpy(name, "XXIXX");
+        -:  179:
+        1:  180:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  181:
+        1:  182:}
+        -:  183:
+        5:  184:TEST (RomanNumberConversion, 38) {
+        -:  185:
+        1:  186:    strcpy(name, "XXXVIII");
+        -:  187:
+        1:  188:    EXPECT_EQ ((RomanNumberConversion(name) == 38), 1);
+        -:  189:
+        1:  190:}
+        -:  191:
+        5:  192:TEST (RomanNumberConversion, 40) {
+        -:  193:
+        1:  194:    strcpy(name, "XL");
+        -:  195:
+        1:  196:    EXPECT_EQ ((RomanNumberConversion(name) == 40), 1);
+        -:  197:
+        1:  198:}
+        -:  199:
+        5:  200:TEST (RomanNumberConversion, 44) {
+        -:  201:
+        1:  202:    strcpy(name, "XLIV");
+        -:  203:
+        1:  204:    EXPECT_EQ ((RomanNumberConversion(name) == 44), 1);
+        -:  205:
+        1:  206:}
+        -:  207:
+        5:  208:TEST (RomanNumberConversion, 48) {
+        -:  209:
+        1:  210:    strcpy(name, "XLVIII");
+        -:  211:
+        1:  212:    EXPECT_EQ ((RomanNumberConversion(name) == 48), 1);
+        -:  213:
+        1:  214:}
+        -:  215:
+        5:  216:TEST (RomanNumberConversion, 49) {
+        -:  217:
+        1:  218:    strcpy(name, "XLIX");
+        -:  219:
+        1:  220:    EXPECT_EQ ((RomanNumberConversion(name) == 49), 1);
+        -:  221:
+        1:  222:}
+        -:  223:
+        5:  224:TEST (RomanNumberConversion, Invalid_Precedence_Due_To_Subtraction) {
+        -:  225:
+        1:  226:    strcpy(name, "XLX");
+        -:  227:
+        1:  228:    EXPECT_EQ ((RomanNumberConversion(name) == -1), 1);
+        -:  229:
+        1:  230:}
+        -:  231:
+        5:  232:TEST (RomanNumberConversion, 58) {
+        -:  233:
+        1:  234:    strcpy(name, "LVIII");
+        -:  235:
+        1:  236:    EXPECT_EQ ((RomanNumberConversion(name) == 58), 1);
+        -:  237:
+        1:  238:}
+        -:  239:
+        5:  240:TEST (RomanNumberConversion, 69) {
+        -:  241:
+        1:  242:    strcpy(name, "LXIX");
+        -:  243:
+        1:  244:    EXPECT_EQ ((RomanNumberConversion(name) == 69), 1);
+        -:  245:
+        1:  246:}
+        -:  247:
+        5:  248:TEST (RomanNumberConversion, 88) {
+        -:  249:
+        1:  250:    strcpy(name, "LXXXVIII");
+        -:  251:
+        1:  252:    EXPECT_EQ ((RomanNumberConversion(name) == 88), 1);
+        -:  253:
+        1:  254:}
+        -:  255:
+        5:  256:TEST (RomanNumberConversion, 90) {
+        -:  257:
+        1:  258:    strcpy(name, "XC");
+        -:  259:
+        1:  260:    EXPECT_EQ ((RomanNumberConversion(name) == 90), 1);
+        -:  261:
+        1:  262:}
+        -:  263:
+        5:  264:TEST (RomanNumberConversion, 99) {
+        -:  265:
+        1:  266:    strcpy(name, "XCIX");
+        -:  267:
+        1:  268:    EXPECT_EQ ((RomanNumberConversion(name) == 99), 1);
+        -:  269:
+        1:  270:}
+        -:  271:
+        5:  272:TEST (RomanNumberConversion, 111) {
+        -:  273:
+        1:  274:    strcpy(name, "CXI");
+        -:  275:
+        1:  276:    EXPECT_EQ ((RomanNumberConversion(name) == 111), 1);
+        -:  277:
+        1:  278:}
+        -:  279:
+        5:  280:TEST (RomanNumberConversion, 203) {
+        -:  281:
+        1:  282:    strcpy(name, "CCIII");
+        -:  283:
+        1:  284:    EXPECT_EQ ((RomanNumberConversion(name) == 203), 1);
+        -:  285:
+        1:  286:}
+        -:  287:
+        5:  288:TEST (RomanNumberConversion, 247) {
+        -:  289:
+        1:  290:    strcpy(name, "CCXLVII");
+        -:  291:
+        1:  292:    EXPECT_EQ ((RomanNumberConversion(name) == 247), 1);
+        -:  293:
+        1:  294:}
+        -:  295:
+        5:  296:TEST (RomanNumberConversion, 338) {
+        -:  297:
+        1:  298:    strcpy(name, "CCCXXXVIII");
+        -:  299:
+        1:  300:    EXPECT_EQ ((RomanNumberConversion(name) == 338), 1);
+        -:  301:
+        1:  302:}
+        -:  303:
+        5:  304:TEST (RomanNumberConversion, Lower_Case_Letters) {
+        -:  305:
+        1:  306:    strcpy(name, "cccxxxviii");
+        -:  307:
+        1:  308:    EXPECT_EQ ((RomanNumberConversion(name) == 338), 1);
+        -:  309:
+        1:  310:}
+        -:  311:
+        5:  312:TEST (RomanNumberConversion, 400) {
+        -:  313:
+        1:  314:    strcpy(name, "CD");
+        -:  315:
+        1:  316:    EXPECT_EQ ((RomanNumberConversion(name) == 400), 1);
+        -:  317:
+        1:  318:}
+        -:  319:
+        5:  320:TEST (RomanNumberConversion, 499) {
+        -:  321:
+        1:  322:    strcpy(name, "CDXCIX");
+        -:  323:
+        1:  324:    EXPECT_EQ ((RomanNumberConversion(name) == 499), 1);
+        -:  325:
+        1:  326:}
+        -:  327:
+        5:  328:TEST (RomanNumberConversion, 550) {
+        -:  329:
+        1:  330:    strcpy(name, "DL");
+        -:  331:
+        1:  332:    EXPECT_EQ ((RomanNumberConversion(name) == 550), 1);
+        -:  333:
+        1:  334:}
+        -:  335:
+        5:  336:TEST (RomanNumberConversion, 695) {
+        -:  337:
+        1:  338:    strcpy(name, "DCXCV");
+        -:  339:
+        1:  340:    EXPECT_EQ ((RomanNumberConversion(name) == 695), 1);
+        -:  341:
+        1:  342:}
+        -:  343:
+        5:  344:TEST (RomanNumberConversion, 713) {
+        -:  345:
+        1:  346:    strcpy(name, "DCCXIII");
+        -:  347:
+        1:  348:    EXPECT_EQ ((RomanNumberConversion(name) == 713), 1);
+        -:  349:
+        1:  350:}
+        -:  351:
+        5:  352:TEST (RomanNumberConversion, 888) {
+        -:  353:
+        1:  354:    strcpy(name, "DCCCLXXXVIII");
+        -:  355:
+        1:  356:    EXPECT_EQ ((RomanNumberConversion(name) == 888), 1);
+        -:  357:
+        1:  358:}
+        -:  359:
+        5:  360:TEST (RomanNumberConversion, 900) {
+        -:  361:
+        1:  362:    strcpy(name, "CM");
+        -:  363:
+        1:  364:    EXPECT_EQ ((RomanNumberConversion(name) == 900), 1);
+        -:  365:
+        1:  366:}
+        -:  367:
+        5:  368:TEST (RomanNumberConversion, 999) {
+        -:  369:
+        1:  370:    strcpy(name, "CMXCIX");
+        -:  371:
+        1:  372:    EXPECT_EQ ((RomanNumberConversion(name) == 999), 1);
+        -:  373:
+        1:  374:}
+        -:  375:
+        5:  376:TEST (RomanNumberConversion, 1047) {
+        -:  377:
+        1:  378:    strcpy(name, "MXLVII");
+        -:  379:
+        1:  380:    EXPECT_EQ ((RomanNumberConversion(name) == 1047), 1);
+        -:  381:
+        1:  382:}
+        -:  383:
+        5:  384:TEST (RomanNumberConversion, 1941) {
+        -:  385:
+        1:  386:    strcpy(name, "MCMXLI");
+        -:  387:
+        1:  388:    EXPECT_EQ ((RomanNumberConversion(name) == 1941), 1);
+        -:  389:
+        1:  390:}
+        -:  391:
+        5:  392:TEST (RomanNumberConversion, 2889) {
+        -:  393:
+        1:  394:    strcpy(name, "MMDCCCLXXXIX");
+        -:  395:
+        1:  396:    EXPECT_EQ ((RomanNumberConversion(name) == 2889), 1);
+        -:  397:
+        1:  398:}
+        -:  399:
+        5:  400:TEST (RomanNumberConversion, 3000) {
+        -:  401:
+        1:  402:    strcpy(name, "MMM");
+        -:  403:
+        1:  404:    EXPECT_EQ ((RomanNumberConversion(name) == 3000), 1);
+        -:  405:
+        1:  406:}
+        -:  407:
+        1:  408:int main(int argc, char **argv) {
+        -:  409:
+        1:  410:::testing::InitGoogleTest(&argc, argv);
+        1:  411:return RUN_ALL_TESTS();
+        -:  412:
+        3:  413:}
