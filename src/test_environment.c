@@ -3,7 +3,7 @@
 #include "roman_number_conversion.h"
 #include "gtest/gtest.h"
 
-char name[30];
+char name[50];
 
 TEST (RomanNumberConversion, Invalid_Length) {
 

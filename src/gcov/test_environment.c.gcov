@@ -9,7 +9,7 @@
         -:    3:#include "roman_number_conversion.h"
         -:    4:#include "gtest/gtest.h"
         -:    5:
-        -:    6:char name[30];
+        -:    6:char name[50];
         -:    7:
         5:    8:TEST (RomanNumberConversion, Invalid_Length) {
         -:    9:
