@@ -1,4 +1,4 @@
-// Function that converts roman numbers to integers - header.
+// Função que converte números romanos para números inteiros - cabeçalho.
 
 #include <stdio.h>
 #include <stdlib.h>
