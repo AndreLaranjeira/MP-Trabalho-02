@@ -7,10 +7,10 @@ LDIR = ../lib
 
 LIBS = -lm -lgtest
 
-_DEPS = RomanNumberConversion.h
+_DEPS = roman_number_conversion.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = RomanNumberConversion.o TestEnvironment.o
+_OBJ = roman_number_conversion.o test_environment.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
