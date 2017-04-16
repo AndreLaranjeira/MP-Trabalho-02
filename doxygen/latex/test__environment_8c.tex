@@ -1,0 +1,442 @@
+\hypertarget{test__environment_8c}{}\section{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (MP)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/test\+\_\+environment.c File Reference}
+\label{test__environment_8c}\index{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (\+M\+P)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/test\+\_\+environment.\+c@{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (\+M\+P)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/test\+\_\+environment.\+c}}
+
+
+Arquivo que testa a função para converter números romanos em número inteiros.  
+
+
+{\ttfamily \#include \char`\"{}roman\+\_\+number\+\_\+conversion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{test__environment_8c_a941f17de44f29ed0460f636801f30882}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Length)
+\item 
+\hyperlink{test__environment_8c_a80898a524d8066e9f6036103f15a87b5}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Character)
+\item 
+\hyperlink{test__environment_8c_a0c994d8887ce820516b1e7d4eeca6edf}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 01)
+\item 
+\hyperlink{test__environment_8c_a930f2c32a89c587f160f000a36d707e5}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 02)
+\item 
+\hyperlink{test__environment_8c_af6e30a392c01ceab54ac24f5c384d02b}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 03)
+\item 
+\hyperlink{test__environment_8c_a5e0ea0fff7ab49d4ec2fd095d7d01fc8}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Four\+\_\+\+Repetitions)
+\item 
+\hyperlink{test__environment_8c_a297c5f42344b1b2c68c74734c70a7159}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 04)
+\item 
+\hyperlink{test__environment_8c_a6ae7923e6a6730ea4cb0da949c2008fc}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 05)
+\item 
+\hyperlink{test__environment_8c_a9858207f01989c683f3531942287e156}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 08)
+\item 
+\hyperlink{test__environment_8c_a6125d7f8536a20c58716d7cbec84e8b2}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Two\+\_\+\+Characters\+\_\+\+Before\+\_\+\+A\+\_\+\+Bigger\+\_\+\+Character)
+\item 
+\hyperlink{test__environment_8c_a9638bedd5f888c6c272de343a029694c}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Three\+\_\+\+Characters\+\_\+\+Before\+\_\+\+A\+\_\+\+Bigger\+\_\+\+Character)
+\item 
+\hyperlink{test__environment_8c_afe636834d118bb2116967c4be3143693}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Repetition)
+\item 
+\hyperlink{test__environment_8c_a3ae2800f468b09b873fc4ffbd1625c16}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 09)
+\item 
+\hyperlink{test__environment_8c_ae918742c0ddb51f26ee94f4338741617}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 14)
+\item 
+\hyperlink{test__environment_8c_a05f108f7e730450e3ec05a74d6413b7b}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 18)
+\item 
+\hyperlink{test__environment_8c_a7436d5949ad7c270f28c9ef2e9154048}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 19)
+\item 
+\hyperlink{test__environment_8c_aa74a8f12c99f7eee37d23478e7a564a7}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Character\+\_\+\+Precedence)
+\item 
+\hyperlink{test__environment_8c_afcf09b923d0e6c1daaf5cd21927c1a7c}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Precedence\+\_\+\+Before\+\_\+\+Subtraction)
+\item 
+\hyperlink{test__environment_8c_af8b8496398e23c3c181e4edebc7ffb45}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Repetition\+\_\+\+After\+\_\+\+Character)
+\item 
+\hyperlink{test__environment_8c_a24793e9740ecf1df76873c7b4eb7e689}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 24)
+\item 
+\hyperlink{test__environment_8c_aa3a1434ffc83ba07b216d99bcde3b656}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 29)
+\item 
+\hyperlink{test__environment_8c_a1044a8cf3972fcc24fc2795565f1fe7e}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Precedence\+\_\+\+After\+\_\+\+Subtraction)
+\item 
+\hyperlink{test__environment_8c_a1d71498e9b62e0a25d33cfc0e8aff638}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 38)
+\item 
+\hyperlink{test__environment_8c_ad11b31692223e702d11236be216af725}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 40)
+\item 
+\hyperlink{test__environment_8c_afb1a1d824e1d89f84471ba8580fb393d}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 44)
+\item 
+\hyperlink{test__environment_8c_a28d70cbbdb33dd3eee9aeb1df02a416d}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 48)
+\item 
+\hyperlink{test__environment_8c_a3ac990bfdc29e4e5e236590cdda54ccf}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 49)
+\item 
+\hyperlink{test__environment_8c_ac033facb0cef142cc2c6ee1e862b24a7}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Invalid\+\_\+\+Precedence\+\_\+\+Due\+\_\+\+To\+\_\+\+Subtraction)
+\item 
+\hyperlink{test__environment_8c_a8250a2dc3e07aa3ed4e126e1c2f9bb99}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 58)
+\item 
+\hyperlink{test__environment_8c_a722ad5238f8f9f02fae2a2933cd976e3}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 69)
+\item 
+\hyperlink{test__environment_8c_afec34d61400134bb49137992f70ff7a6}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 88)
+\item 
+\hyperlink{test__environment_8c_acd3bdd1cff791a5f16d07cfabc5af8bc}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 90)
+\item 
+\hyperlink{test__environment_8c_aa06531186f8bb056edaf7de53e0e7ae9}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 99)
+\item 
+\hyperlink{test__environment_8c_ab215b42855a08421ca4e36529ffada8b}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 111)
+\item 
+\hyperlink{test__environment_8c_a5b636c95182b172cf20818960d084357}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 203)
+\item 
+\hyperlink{test__environment_8c_a230100e1b3ab6ed381f71deb7c702651}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 247)
+\item 
+\hyperlink{test__environment_8c_a82ea6f7dff111a45c559a4a5faa85031}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 338)
+\item 
+\hyperlink{test__environment_8c_adc8441d4477e29c350e723bb93ccc80d}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, Mixed\+\_\+\+Case\+\_\+\+Letters)
+\item 
+\hyperlink{test__environment_8c_a0ed1cb3d45f5c4f122b32d7de016f79a}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 400)
+\item 
+\hyperlink{test__environment_8c_a8b24b7405435af0c26107614be507feb}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 499)
+\item 
+\hyperlink{test__environment_8c_a781510a1ff46c3dc956ca4960ca8101d}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 550)
+\item 
+\hyperlink{test__environment_8c_a72970b48507bff162f95409ffa476c6f}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 695)
+\item 
+\hyperlink{test__environment_8c_ac92285d4200b13163af42a365f068dec}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 713)
+\item 
+\hyperlink{test__environment_8c_a64051cf89b5fd0b33d27964f54f4c01a}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 888)
+\item 
+\hyperlink{test__environment_8c_a06a5fcbd5550207e199127ca337900a5}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 900)
+\item 
+\hyperlink{test__environment_8c_ae4c61c30e61327292e801c9823ea8098}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 999)
+\item 
+\hyperlink{test__environment_8c_af50e93ed12d24642eb7fcc42598a5a1d}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 1047)
+\item 
+\hyperlink{test__environment_8c_a846105e495804c192172d3405a46dbb2}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 1941)
+\item 
+\hyperlink{test__environment_8c_a29fa30b2274067806e7ac8e5759b6b36}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 2889)
+\item 
+\hyperlink{test__environment_8c_a126e791e21c11530bec4a503a2693259}{T\+E\+ST} (\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}, 3000)
+\item 
+int \hyperlink{test__environment_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{test__environment_8c_ae5cb967283dbbdf75cb2032c1fa08fee}{name} \mbox{[}50\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo que testa a função para converter números romanos em número inteiros. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__environment_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__environment_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!main@{main}}
+\index{main@{main}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__environment_8c_a941f17de44f29ed0460f636801f30882}\label{test__environment_8c_a941f17de44f29ed0460f636801f30882}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Length}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com mais de 30 caracteres. \mbox{\Hypertarget{test__environment_8c_a80898a524d8066e9f6036103f15a87b5}\label{test__environment_8c_a80898a524d8066e9f6036103f15a87b5}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Character}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com caracteres inválidos. \mbox{\Hypertarget{test__environment_8c_a0c994d8887ce820516b1e7d4eeca6edf}\label{test__environment_8c_a0c994d8887ce820516b1e7d4eeca6edf}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{01}]{ }\end{DoxyParamCaption})}
+
+Teste do número 01. \mbox{\Hypertarget{test__environment_8c_a930f2c32a89c587f160f000a36d707e5}\label{test__environment_8c_a930f2c32a89c587f160f000a36d707e5}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{02}]{ }\end{DoxyParamCaption})}
+
+Teste do número 02. \mbox{\Hypertarget{test__environment_8c_af6e30a392c01ceab54ac24f5c384d02b}\label{test__environment_8c_af6e30a392c01ceab54ac24f5c384d02b}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{03}]{ }\end{DoxyParamCaption})}
+
+Teste do número 03. \mbox{\Hypertarget{test__environment_8c_a5e0ea0fff7ab49d4ec2fd095d7d01fc8}\label{test__environment_8c_a5e0ea0fff7ab49d4ec2fd095d7d01fc8}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Four\+\_\+\+Repetitions}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com 4 caracteres repetidos e sequenciais. \mbox{\Hypertarget{test__environment_8c_a297c5f42344b1b2c68c74734c70a7159}\label{test__environment_8c_a297c5f42344b1b2c68c74734c70a7159}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{04}]{ }\end{DoxyParamCaption})}
+
+Teste do número 04. \mbox{\Hypertarget{test__environment_8c_a6ae7923e6a6730ea4cb0da949c2008fc}\label{test__environment_8c_a6ae7923e6a6730ea4cb0da949c2008fc}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{05}]{ }\end{DoxyParamCaption})}
+
+Teste do número 05. \mbox{\Hypertarget{test__environment_8c_a9858207f01989c683f3531942287e156}\label{test__environment_8c_a9858207f01989c683f3531942287e156}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{08}]{ }\end{DoxyParamCaption})}
+
+Teste do número 08. \mbox{\Hypertarget{test__environment_8c_a6125d7f8536a20c58716d7cbec84e8b2}\label{test__environment_8c_a6125d7f8536a20c58716d7cbec84e8b2}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Two\+\_\+\+Characters\+\_\+\+Before\+\_\+\+A\+\_\+\+Bigger\+\_\+\+Character}]{ }\end{DoxyParamCaption})}
+
+Testes para argumentos com caracteres antes de um caracter de valor maior. \mbox{\Hypertarget{test__environment_8c_a9638bedd5f888c6c272de343a029694c}\label{test__environment_8c_a9638bedd5f888c6c272de343a029694c}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Three\+\_\+\+Characters\+\_\+\+Before\+\_\+\+A\+\_\+\+Bigger\+\_\+\+Character}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__environment_8c_afe636834d118bb2116967c4be3143693}\label{test__environment_8c_afe636834d118bb2116967c4be3143693}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Repetition}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com uma repetição de caracter inválida. \mbox{\Hypertarget{test__environment_8c_a3ae2800f468b09b873fc4ffbd1625c16}\label{test__environment_8c_a3ae2800f468b09b873fc4ffbd1625c16}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{09}]{ }\end{DoxyParamCaption})}
+
+Teste do número 09. \mbox{\Hypertarget{test__environment_8c_ae918742c0ddb51f26ee94f4338741617}\label{test__environment_8c_ae918742c0ddb51f26ee94f4338741617}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{14}]{ }\end{DoxyParamCaption})}
+
+Teste do número 14. \mbox{\Hypertarget{test__environment_8c_a05f108f7e730450e3ec05a74d6413b7b}\label{test__environment_8c_a05f108f7e730450e3ec05a74d6413b7b}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{18}]{ }\end{DoxyParamCaption})}
+
+Teste do número 18. \mbox{\Hypertarget{test__environment_8c_a7436d5949ad7c270f28c9ef2e9154048}\label{test__environment_8c_a7436d5949ad7c270f28c9ef2e9154048}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{19}]{ }\end{DoxyParamCaption})}
+
+Teste do número 19. \mbox{\Hypertarget{test__environment_8c_aa74a8f12c99f7eee37d23478e7a564a7}\label{test__environment_8c_aa74a8f12c99f7eee37d23478e7a564a7}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Character\+\_\+\+Precedence}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com precedência inválida. \mbox{\Hypertarget{test__environment_8c_afcf09b923d0e6c1daaf5cd21927c1a7c}\label{test__environment_8c_afcf09b923d0e6c1daaf5cd21927c1a7c}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Precedence\+\_\+\+Before\+\_\+\+Subtraction}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com precedência inválida antes de uma subtração. \mbox{\Hypertarget{test__environment_8c_af8b8496398e23c3c181e4edebc7ffb45}\label{test__environment_8c_af8b8496398e23c3c181e4edebc7ffb45}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Repetition\+\_\+\+After\+\_\+\+Character}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com repetição inválida após um caracter. \mbox{\Hypertarget{test__environment_8c_a24793e9740ecf1df76873c7b4eb7e689}\label{test__environment_8c_a24793e9740ecf1df76873c7b4eb7e689}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{24}]{ }\end{DoxyParamCaption})}
+
+Teste do número 24. \mbox{\Hypertarget{test__environment_8c_aa3a1434ffc83ba07b216d99bcde3b656}\label{test__environment_8c_aa3a1434ffc83ba07b216d99bcde3b656}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{29}]{ }\end{DoxyParamCaption})}
+
+Teste do número 29. \mbox{\Hypertarget{test__environment_8c_a1044a8cf3972fcc24fc2795565f1fe7e}\label{test__environment_8c_a1044a8cf3972fcc24fc2795565f1fe7e}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Precedence\+\_\+\+After\+\_\+\+Subtraction}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com precedência inválida após uma subtração. \mbox{\Hypertarget{test__environment_8c_a1d71498e9b62e0a25d33cfc0e8aff638}\label{test__environment_8c_a1d71498e9b62e0a25d33cfc0e8aff638}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{38}]{ }\end{DoxyParamCaption})}
+
+Teste do número 38. \mbox{\Hypertarget{test__environment_8c_ad11b31692223e702d11236be216af725}\label{test__environment_8c_ad11b31692223e702d11236be216af725}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{40}]{ }\end{DoxyParamCaption})}
+
+Teste do número 40. \mbox{\Hypertarget{test__environment_8c_afb1a1d824e1d89f84471ba8580fb393d}\label{test__environment_8c_afb1a1d824e1d89f84471ba8580fb393d}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{44}]{ }\end{DoxyParamCaption})}
+
+Teste do número 44. \mbox{\Hypertarget{test__environment_8c_a28d70cbbdb33dd3eee9aeb1df02a416d}\label{test__environment_8c_a28d70cbbdb33dd3eee9aeb1df02a416d}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{48}]{ }\end{DoxyParamCaption})}
+
+Teste do número 48. \mbox{\Hypertarget{test__environment_8c_a3ac990bfdc29e4e5e236590cdda54ccf}\label{test__environment_8c_a3ac990bfdc29e4e5e236590cdda54ccf}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{49}]{ }\end{DoxyParamCaption})}
+
+Teste do número 49. \mbox{\Hypertarget{test__environment_8c_ac033facb0cef142cc2c6ee1e862b24a7}\label{test__environment_8c_ac033facb0cef142cc2c6ee1e862b24a7}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Invalid\+\_\+\+Precedence\+\_\+\+Due\+\_\+\+To\+\_\+\+Subtraction}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos que tentam adicionar caracteres subtraídos. \mbox{\Hypertarget{test__environment_8c_a8250a2dc3e07aa3ed4e126e1c2f9bb99}\label{test__environment_8c_a8250a2dc3e07aa3ed4e126e1c2f9bb99}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{58}]{ }\end{DoxyParamCaption})}
+
+Teste do número 58. \mbox{\Hypertarget{test__environment_8c_a722ad5238f8f9f02fae2a2933cd976e3}\label{test__environment_8c_a722ad5238f8f9f02fae2a2933cd976e3}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{69}]{ }\end{DoxyParamCaption})}
+
+Teste do número 69. \mbox{\Hypertarget{test__environment_8c_afec34d61400134bb49137992f70ff7a6}\label{test__environment_8c_afec34d61400134bb49137992f70ff7a6}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{88}]{ }\end{DoxyParamCaption})}
+
+Teste do número 88. \mbox{\Hypertarget{test__environment_8c_acd3bdd1cff791a5f16d07cfabc5af8bc}\label{test__environment_8c_acd3bdd1cff791a5f16d07cfabc5af8bc}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [32/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{90}]{ }\end{DoxyParamCaption})}
+
+Teste do número 90. \mbox{\Hypertarget{test__environment_8c_aa06531186f8bb056edaf7de53e0e7ae9}\label{test__environment_8c_aa06531186f8bb056edaf7de53e0e7ae9}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [33/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{99}]{ }\end{DoxyParamCaption})}
+
+Teste do número 99. \mbox{\Hypertarget{test__environment_8c_ab215b42855a08421ca4e36529ffada8b}\label{test__environment_8c_ab215b42855a08421ca4e36529ffada8b}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [34/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{111}]{ }\end{DoxyParamCaption})}
+
+Teste do número 111. \mbox{\Hypertarget{test__environment_8c_a5b636c95182b172cf20818960d084357}\label{test__environment_8c_a5b636c95182b172cf20818960d084357}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [35/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{203}]{ }\end{DoxyParamCaption})}
+
+Teste do número 203. \mbox{\Hypertarget{test__environment_8c_a230100e1b3ab6ed381f71deb7c702651}\label{test__environment_8c_a230100e1b3ab6ed381f71deb7c702651}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [36/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{247}]{ }\end{DoxyParamCaption})}
+
+Teste do número 247. \mbox{\Hypertarget{test__environment_8c_a82ea6f7dff111a45c559a4a5faa85031}\label{test__environment_8c_a82ea6f7dff111a45c559a4a5faa85031}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [37/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{338}]{ }\end{DoxyParamCaption})}
+
+Teste do número 338. \mbox{\Hypertarget{test__environment_8c_adc8441d4477e29c350e723bb93ccc80d}\label{test__environment_8c_adc8441d4477e29c350e723bb93ccc80d}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [38/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{Mixed\+\_\+\+Case\+\_\+\+Letters}]{ }\end{DoxyParamCaption})}
+
+Teste para argumentos com letras maiúsculas e minúsculas. \mbox{\Hypertarget{test__environment_8c_a0ed1cb3d45f5c4f122b32d7de016f79a}\label{test__environment_8c_a0ed1cb3d45f5c4f122b32d7de016f79a}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [39/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{400}]{ }\end{DoxyParamCaption})}
+
+Teste do número 400. \mbox{\Hypertarget{test__environment_8c_a8b24b7405435af0c26107614be507feb}\label{test__environment_8c_a8b24b7405435af0c26107614be507feb}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [40/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{499}]{ }\end{DoxyParamCaption})}
+
+Teste do número 499. \mbox{\Hypertarget{test__environment_8c_a781510a1ff46c3dc956ca4960ca8101d}\label{test__environment_8c_a781510a1ff46c3dc956ca4960ca8101d}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [41/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{550}]{ }\end{DoxyParamCaption})}
+
+Teste do número 550. \mbox{\Hypertarget{test__environment_8c_a72970b48507bff162f95409ffa476c6f}\label{test__environment_8c_a72970b48507bff162f95409ffa476c6f}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [42/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{695}]{ }\end{DoxyParamCaption})}
+
+Teste do número 695. \mbox{\Hypertarget{test__environment_8c_ac92285d4200b13163af42a365f068dec}\label{test__environment_8c_ac92285d4200b13163af42a365f068dec}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [43/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{713}]{ }\end{DoxyParamCaption})}
+
+Teste do número 713. \mbox{\Hypertarget{test__environment_8c_a64051cf89b5fd0b33d27964f54f4c01a}\label{test__environment_8c_a64051cf89b5fd0b33d27964f54f4c01a}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [44/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{888}]{ }\end{DoxyParamCaption})}
+
+Teste do número 888. \mbox{\Hypertarget{test__environment_8c_a06a5fcbd5550207e199127ca337900a5}\label{test__environment_8c_a06a5fcbd5550207e199127ca337900a5}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [45/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{900}]{ }\end{DoxyParamCaption})}
+
+Teste do número 900. \mbox{\Hypertarget{test__environment_8c_ae4c61c30e61327292e801c9823ea8098}\label{test__environment_8c_ae4c61c30e61327292e801c9823ea8098}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [46/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{999}]{ }\end{DoxyParamCaption})}
+
+Teste do número 999. \mbox{\Hypertarget{test__environment_8c_af50e93ed12d24642eb7fcc42598a5a1d}\label{test__environment_8c_af50e93ed12d24642eb7fcc42598a5a1d}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [47/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{1047}]{ }\end{DoxyParamCaption})}
+
+Teste do número 1047. \mbox{\Hypertarget{test__environment_8c_a846105e495804c192172d3405a46dbb2}\label{test__environment_8c_a846105e495804c192172d3405a46dbb2}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [48/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{1941}]{ }\end{DoxyParamCaption})}
+
+Teste do número 1941. \mbox{\Hypertarget{test__environment_8c_a29fa30b2274067806e7ac8e5759b6b36}\label{test__environment_8c_a29fa30b2274067806e7ac8e5759b6b36}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [49/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{2889}]{ }\end{DoxyParamCaption})}
+
+Teste do número 2889. \mbox{\Hypertarget{test__environment_8c_a126e791e21c11530bec4a503a2693259}\label{test__environment_8c_a126e791e21c11530bec4a503a2693259}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [50/50]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}{Roman\+Number\+Conversion}}]{,  }\item[{3000}]{ }\end{DoxyParamCaption})}
+
+Teste do número 3000. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{test__environment_8c_ae5cb967283dbbdf75cb2032c1fa08fee}\label{test__environment_8c_ae5cb967283dbbdf75cb2032c1fa08fee}} 
+\index{test\+\_\+environment.\+c@{test\+\_\+environment.\+c}!name@{name}}
+\index{name@{name}!test\+\_\+environment.\+c@{test\+\_\+environment.\+c}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char name\mbox{[}50\mbox{]}}
+

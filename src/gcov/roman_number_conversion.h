@@ -1,7 +1,12 @@
 // Função que converte números romanos para números inteiros - cabeçalho.
 
-// O arquivo contém os cabeçalhos da função que converte números
-// romanos para números inteiros e das funções auxiliares a ela.
+/**
+
+  \file
+  \brief Arquivo que contém os cabeçalhos da função para converter números
+  romanos em número inteiros, bem como das funções auxiliares neste processo.
+
+*/
 
 #include <stdio.h>
 #include <stdlib.h>

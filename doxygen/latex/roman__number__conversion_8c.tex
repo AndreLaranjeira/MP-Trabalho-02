@@ -1,0 +1,70 @@
+\hypertarget{roman__number__conversion_8c}{}\section{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (MP)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/roman\+\_\+number\+\_\+conversion.c File Reference}
+\label{roman__number__conversion_8c}\index{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (\+M\+P)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/roman\+\_\+number\+\_\+conversion.\+c@{/home/andre/\+Dropbox/\+Unb/3º Semestre/\+Métodos de programação (\+M\+P)/\+Trabalho 02/\+M\+P-\/\+Trabalho-\/02/src/roman\+\_\+number\+\_\+conversion.\+c}}
+
+
+Arquivo que contém a função para converter números romanos em número inteiros, bem como as funções auxiliares neste processo.  
+
+
+{\ttfamily \#include \char`\"{}roman\+\_\+number\+\_\+conversion.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{roman__number__conversion_8c_a68d166cb07b429de791067b781a66044}{Roman\+Number\+Conversion} (char $\ast$roman\+\_\+number)
+\item 
+int \hyperlink{roman__number__conversion_8c_a032d1ce8ed41f236df5209554210b111}{Can\+Be\+Repeated} (char current\+\_\+char)
+\item 
+int \hyperlink{roman__number__conversion_8c_a384ee55cd97356c91ca11d0f745f3abe}{Character\+Value} (char current\+\_\+char)
+\item 
+int \hyperlink{roman__number__conversion_8c_a6f1cff6888f1ce7d0577fb51b7f1ec99}{Subtraction\+Precedence} (char precedent\+\_\+char, char current\+\_\+char)
+\item 
+int \hyperlink{roman__number__conversion_8c_a6adfc3072989992db3d977d99d3b0afc}{Valid\+Precedences} (char $\ast$past\+\_\+characters, char current\+\_\+char)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo que contém a função para converter números romanos em número inteiros, bem como as funções auxiliares neste processo. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{roman__number__conversion_8c_a032d1ce8ed41f236df5209554210b111}\label{roman__number__conversion_8c_a032d1ce8ed41f236df5209554210b111}} 
+\index{roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}!Can\+Be\+Repeated@{Can\+Be\+Repeated}}
+\index{Can\+Be\+Repeated@{Can\+Be\+Repeated}!roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}}
+\subsubsection{\texorpdfstring{Can\+Be\+Repeated()}{CanBeRepeated()}}
+{\footnotesize\ttfamily int Can\+Be\+Repeated (\begin{DoxyParamCaption}\item[{char}]{current\+\_\+char }\end{DoxyParamCaption})}
+
+Função auxiliar para verificar se um dado caracter pode ser repetido na numeração romana.
+
+Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__conversion_8c_a384ee55cd97356c91ca11d0f745f3abe}\label{roman__number__conversion_8c_a384ee55cd97356c91ca11d0f745f3abe}} 
+\index{roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}!Character\+Value@{Character\+Value}}
+\index{Character\+Value@{Character\+Value}!roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}}
+\subsubsection{\texorpdfstring{Character\+Value()}{CharacterValue()}}
+{\footnotesize\ttfamily int Character\+Value (\begin{DoxyParamCaption}\item[{char}]{current\+\_\+char }\end{DoxyParamCaption})}
+
+Função auxiliar para retornar o valor de um dado caracter na numeração romana.
+
+Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__conversion_8c_a68d166cb07b429de791067b781a66044}\label{roman__number__conversion_8c_a68d166cb07b429de791067b781a66044}} 
+\index{roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}!Roman\+Number\+Conversion@{Roman\+Number\+Conversion}}
+\index{Roman\+Number\+Conversion@{Roman\+Number\+Conversion}!roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}}
+\subsubsection{\texorpdfstring{Roman\+Number\+Conversion()}{RomanNumberConversion()}}
+{\footnotesize\ttfamily int Roman\+Number\+Conversion (\begin{DoxyParamCaption}\item[{char $\ast$}]{roman\+\_\+number }\end{DoxyParamCaption})}
+
+Função que converte números romanos.
+
+Recebe como parâmetro um vetor de caracteres que contém um numeral romano. \mbox{\Hypertarget{roman__number__conversion_8c_a6f1cff6888f1ce7d0577fb51b7f1ec99}\label{roman__number__conversion_8c_a6f1cff6888f1ce7d0577fb51b7f1ec99}} 
+\index{roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}!Subtraction\+Precedence@{Subtraction\+Precedence}}
+\index{Subtraction\+Precedence@{Subtraction\+Precedence}!roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}}
+\subsubsection{\texorpdfstring{Subtraction\+Precedence()}{SubtractionPrecedence()}}
+{\footnotesize\ttfamily int Subtraction\+Precedence (\begin{DoxyParamCaption}\item[{char}]{precedent\+\_\+char,  }\item[{char}]{current\+\_\+char }\end{DoxyParamCaption})}
+
+Função auxiliar para verificar se um dado par de caracteres constitui um caso em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
+
+Recebe como parâmetro dois caracteres que são sequenciais. \mbox{\Hypertarget{roman__number__conversion_8c_a6adfc3072989992db3d977d99d3b0afc}\label{roman__number__conversion_8c_a6adfc3072989992db3d977d99d3b0afc}} 
+\index{roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}!Valid\+Precedences@{Valid\+Precedences}}
+\index{Valid\+Precedences@{Valid\+Precedences}!roman\+\_\+number\+\_\+conversion.\+c@{roman\+\_\+number\+\_\+conversion.\+c}}
+\subsubsection{\texorpdfstring{Valid\+Precedences()}{ValidPrecedences()}}
+{\footnotesize\ttfamily int Valid\+Precedences (\begin{DoxyParamCaption}\item[{char $\ast$}]{past\+\_\+characters,  }\item[{char}]{current\+\_\+char }\end{DoxyParamCaption})}
+
+Função auxiliar para verificar se os caracteres anteriores em conjunto com o caracter não constiuem um argumento inválido na numeração romana.
+
+Recebe como parâmetros um vetor com os caracteres já processados e o caracter que está sendo processado. 

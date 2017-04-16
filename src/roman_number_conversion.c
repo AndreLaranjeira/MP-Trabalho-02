@@ -1,6 +1,18 @@
 // Função que converte números romanos para números inteiros.
 
+/**
+
+  \file
+  \brief Arquivo que contém a função para converter números romanos
+  em número inteiros, bem como as funções auxiliares neste processo.
+
+*/
+
 #include "roman_number_conversion.h"
+
+/** Função que converte números romanos.
+
+    Recebe como parâmetro um vetor de caracteres que contém um numeral romano.*/
 
 int RomanNumberConversion (char *roman_number) {
 
@@ -68,8 +80,10 @@ int RomanNumberConversion (char *roman_number) {
 
 }
 
-// Função auxiliar para verificar se um dado caracter pode ser repetido na
-// numeração romana. Recebe como parâmetro um caracter qualquer.
+/** Função auxiliar para verificar se um dado caracter pode ser repetido na
+    numeração romana.
+
+    Recebe como parâmetro um caracter qualquer. */
 
 int CanBeRepeated (char current_char) {
 
@@ -88,6 +102,11 @@ int CanBeRepeated (char current_char) {
     return 0;
 
 }
+
+/** Função auxiliar para retornar o valor de um dado caracter na numeração
+    romana.
+
+    Recebe como parâmetro um caracter qualquer.*/
 
 int CharacterValue (char current_char) {
 
@@ -121,10 +140,10 @@ int CharacterValue (char current_char) {
 
 }
 
-// Função auxiliar para verificar se um dado par de caracteres constitui um caso
-// em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
-//
-// Recebe como parâmetro dois caracteres que são sequenciais.
+/** Função auxiliar para verificar se um dado par de caracteres constitui um caso
+    em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
+
+    Recebe como parâmetro dois caracteres que são sequenciais. */
 
 int SubtractionPrecedence (char precedent_char, char current_char) {
 
@@ -140,8 +159,11 @@ int SubtractionPrecedence (char precedent_char, char current_char) {
 
 }
 
-// Função auxiliar para verificar se os caracteres anteriores a um dado caracter
-// constituem um número válido na numeração romana.
+/** Função auxiliar para verificar se os caracteres anteriores em conjunto com o
+    caracter não constiuem um argumento inválido na numeração romana. 
+
+    Recebe como parâmetros um vetor com os caracteres já processados e o
+    caracter que está sendo processado.*/
 
 int ValidPrecedences (char *past_characters, char current_char) {
 
