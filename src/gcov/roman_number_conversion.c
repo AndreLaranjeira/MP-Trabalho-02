@@ -12,7 +12,11 @@
 
 /** Função que converte números romanos.
 
-    Recebe como parâmetro um vetor de caracteres que contém um numeral romano.*/
+    \param roman_number recebe um vetor de caracteres.
+    \return A função retorna o valor de roman_number caso o parâmetro passado
+    seja um argumento válido e -1 caso o argumento passado seja inválido.
+
+    */
 
 int RomanNumberConversion (char *roman_number) {
 
@@ -52,6 +56,8 @@ int RomanNumberConversion (char *roman_number) {
     if (current_char != last_char) {
 
       // Condicional para tratar de casos de subtração.
+      // Note que o valor é subtraído duas vezes, pois ele havia sido somado
+      // anteriormente.
 
       if (SubtractionPrecedence(last_char, current_char))
         sum -= (2 * CharacterValue(last_char));
@@ -83,7 +89,11 @@ int RomanNumberConversion (char *roman_number) {
 /** Função auxiliar para verificar se um dado caracter pode ser repetido na
     numeração romana.
 
-    Recebe como parâmetro um caracter qualquer. */
+    \param current_char recebe um caracter.
+    \return A função retorna 1 caso current_char possa ser repetido e -1 caso
+    não possa ser repetido.
+
+     */
 
 int CanBeRepeated (char current_char) {
 
@@ -106,7 +116,10 @@ int CanBeRepeated (char current_char) {
 /** Função auxiliar para retornar o valor de um dado caracter na numeração
     romana.
 
-    Recebe como parâmetro um caracter qualquer.*/
+    \param current_char recebe um caracter.
+    \return A função retorna o número inteiro equivalente a current_char caso
+    este seja um caracter presente na numeração romana e -1 caso contrário.
+    */
 
 int CharacterValue (char current_char) {
 
@@ -143,7 +156,11 @@ int CharacterValue (char current_char) {
 /** Função auxiliar para verificar se um dado par de caracteres constitui um caso
     em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
 
-    Recebe como parâmetro dois caracteres que são sequenciais. */
+    \param precedent_char recebe um caracter.
+    \param current_char recebe um caracter.
+    \return A função retorna 1 caso precedent_char e current_char constituam uma
+    precedência de subtração e -1 caso contrário.
+     */
 
 int SubtractionPrecedence (char precedent_char, char current_char) {
 
@@ -160,10 +177,14 @@ int SubtractionPrecedence (char precedent_char, char current_char) {
 }
 
 /** Função auxiliar para verificar se os caracteres anteriores em conjunto com o
-    caracter não constiuem um argumento inválido na numeração romana. 
+    caracter não constiuem um argumento inválido na numeração romana.
 
-    Recebe como parâmetros um vetor com os caracteres já processados e o
-    caracter que está sendo processado.*/
+    \param past_characters recebe um vetor de caracteres.
+    \param current_char recebe um caracter.
+    \return A função retorna 1 caso current_char possa ser precedido por
+    past_characters e -1 caso contrário.
+
+    */
 
 int ValidPrecedences (char *past_characters, char current_char) {
 

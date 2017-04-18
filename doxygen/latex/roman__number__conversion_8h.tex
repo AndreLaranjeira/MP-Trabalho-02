@@ -38,7 +38,15 @@ Arquivo que contém os cabeçalhos da função para converter números romanos e
 
 Função auxiliar para verificar se um dado caracter pode ser repetido na numeração romana.
 
-Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__conversion_8h_a4ec724406dcffac0e37d15791fe58397}\label{roman__number__conversion_8h_a4ec724406dcffac0e37d15791fe58397}} 
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+char} & recebe um caracter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função retorna 1 caso current\+\_\+char possa ser repetido e -\/1 caso não possa ser repetido. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{roman__number__conversion_8h_a4ec724406dcffac0e37d15791fe58397}\label{roman__number__conversion_8h_a4ec724406dcffac0e37d15791fe58397}} 
 \index{roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}!Character\+Value@{Character\+Value}}
 \index{Character\+Value@{Character\+Value}!roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}}
 \subsubsection{\texorpdfstring{Character\+Value()}{CharacterValue()}}
@@ -46,7 +54,15 @@ Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__c
 
 Função auxiliar para retornar o valor de um dado caracter na numeração romana.
 
-Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}\label{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}} 
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+char} & recebe um caracter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função retorna o número inteiro equivalente a current\+\_\+char caso este seja um caracter presente na numeração romana e -\/1 caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}\label{roman__number__conversion_8h_a45d88dea43ec645162c153dbf9e2afdc}} 
 \index{roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}!Roman\+Number\+Conversion@{Roman\+Number\+Conversion}}
 \index{Roman\+Number\+Conversion@{Roman\+Number\+Conversion}!roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}}
 \subsubsection{\texorpdfstring{Roman\+Number\+Conversion()}{RomanNumberConversion()}}
@@ -54,7 +70,15 @@ Recebe como parâmetro um caracter qualquer. \mbox{\Hypertarget{roman__number__c
 
 Função que converte números romanos.
 
-Recebe como parâmetro um vetor de caracteres que contém um numeral romano. \mbox{\Hypertarget{roman__number__conversion_8h_a74f38da0120904847a623c8cf56dd396}\label{roman__number__conversion_8h_a74f38da0120904847a623c8cf56dd396}} 
+
+\begin{DoxyParams}{Parameters}
+{\em roman\+\_\+number} & recebe um vetor de caracteres. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função retorna o valor de roman\+\_\+number caso o parâmetro passado seja um argumento válido e -\/1 caso o argumento passado seja inválido. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{roman__number__conversion_8h_a74f38da0120904847a623c8cf56dd396}\label{roman__number__conversion_8h_a74f38da0120904847a623c8cf56dd396}} 
 \index{roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}!Subtraction\+Precedence@{Subtraction\+Precedence}}
 \index{Subtraction\+Precedence@{Subtraction\+Precedence}!roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}}
 \subsubsection{\texorpdfstring{Subtraction\+Precedence()}{SubtractionPrecedence()}}
@@ -62,7 +86,17 @@ Recebe como parâmetro um vetor de caracteres que contém um numeral romano. \mb
 
 Função auxiliar para verificar se um dado par de caracteres constitui um caso em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
 
-Recebe como parâmetro dois caracteres que são sequenciais. \mbox{\Hypertarget{roman__number__conversion_8h_a866c3e48cdc95491b1f561418e0f5016}\label{roman__number__conversion_8h_a866c3e48cdc95491b1f561418e0f5016}} 
+
+\begin{DoxyParams}{Parameters}
+{\em precedent\+\_\+char} & recebe um caracter. \\
+\hline
+{\em current\+\_\+char} & recebe um caracter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função retorna 1 caso precedent\+\_\+char e current\+\_\+char constituam uma precedência de subtração e -\/1 caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{roman__number__conversion_8h_a866c3e48cdc95491b1f561418e0f5016}\label{roman__number__conversion_8h_a866c3e48cdc95491b1f561418e0f5016}} 
 \index{roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}!Valid\+Precedences@{Valid\+Precedences}}
 \index{Valid\+Precedences@{Valid\+Precedences}!roman\+\_\+number\+\_\+conversion.\+h@{roman\+\_\+number\+\_\+conversion.\+h}}
 \subsubsection{\texorpdfstring{Valid\+Precedences()}{ValidPrecedences()}}
@@ -70,4 +104,13 @@ Recebe como parâmetro dois caracteres que são sequenciais. \mbox{\Hypertarget{
 
 Função auxiliar para verificar se os caracteres anteriores em conjunto com o caracter não constiuem um argumento inválido na numeração romana.
 
-Recebe como parâmetros um vetor com os caracteres já processados e o caracter que está sendo processado. 
+
+\begin{DoxyParams}{Parameters}
+{\em past\+\_\+characters} & recebe um vetor de caracteres. \\
+\hline
+{\em current\+\_\+char} & recebe um caracter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A função retorna 1 caso current\+\_\+char possa ser precedido por past\+\_\+characters e -\/1 caso contrário. 
+\end{DoxyReturn}
