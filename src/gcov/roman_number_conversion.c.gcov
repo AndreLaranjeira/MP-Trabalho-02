@@ -18,220 +18,241 @@
         -:   12:
         -:   13:/** Função que converte números romanos.
         -:   14:
-        -:   15:    Recebe como parâmetro um vetor de caracteres que contém um numeral romano.*/
-        -:   16:
-       50:   17:int RomanNumberConversion (char *roman_number) {
+        -:   15:    \param roman_number recebe um vetor de caracteres.
+        -:   16:    \return A função retorna o valor de roman_number caso o parâmetro passado
+        -:   17:    seja um argumento válido e -1 caso o argumento passado seja inválido.
         -:   18:
-       50:   19:  char current_char, last_char = '\0', past_characters[30] = "";
-        -:   20:  unsigned int iterator, last_char_count;
-       50:   21:  int auxiliary_value, sum = 0;
+        -:   19:    */
+        -:   20:
+       50:   21:int RomanNumberConversion (char *roman_number) {
         -:   22:
-        -:   23:  // A função não aceita argumentos com mais de 30 caracteres.
-        -:   24:
-       50:   25:  if (strlen(roman_number) > 30)
-        1:   26:    return -1;
-        -:   27:
-      253:   28:  for (iterator = 0; iterator < strlen(roman_number); iterator++) {
-        -:   29:
-        -:   30:    // Os caracteres são processados em caixa alta, evitando problemas.
+       50:   23:  char current_char, last_char = '\0', past_characters[30] = "";
+        -:   24:  unsigned int iterator, last_char_count;
+       50:   25:  int auxiliary_value, sum = 0;
+        -:   26:
+        -:   27:  // A função não aceita argumentos com mais de 30 caracteres.
+        -:   28:
+       50:   29:  if (strlen(roman_number) > 30)
+        1:   30:    return -1;
         -:   31:
-      214:   32:    current_char = toupper(roman_number[iterator]);
+      253:   32:  for (iterator = 0; iterator < strlen(roman_number); iterator++) {
         -:   33:
-      214:   34:    if(!ValidPrecedences(past_characters, current_char))
-        8:   35:      return -1;
-        -:   36:
-        -:   37:    // Armazena-se o caracter atual.
-        -:   38:
-      206:   39:    past_characters[iterator] = current_char;
+        -:   34:    // Os caracteres são processados em caixa alta, evitando problemas.
+        -:   35:
+      214:   36:    current_char = toupper(roman_number[iterator]);
+        -:   37:
+      214:   38:    if(!ValidPrecedences(past_characters, current_char))
+        8:   39:      return -1;
         -:   40:
-      206:   41:    auxiliary_value = CharacterValue(current_char);
+        -:   41:    // Armazena-se o caracter atual.
         -:   42:
-        -:   43:    // Se o caracter não existir na numeração romana, a função
-        -:   44:    // CharacterValue retorna -1.
-        -:   45:
-      206:   46:    if(auxiliary_value == -1)
-        1:   47:      return -1;
-        -:   48:
-        -:   49:    else
-      205:   50:      sum += auxiliary_value;
-        -:   51:
-      205:   52:    if (current_char != last_char) {
-        -:   53:
-        -:   54:      // Condicional para tratar de casos de subtração.
+      206:   43:    past_characters[iterator] = current_char;
+        -:   44:
+      206:   45:    auxiliary_value = CharacterValue(current_char);
+        -:   46:
+        -:   47:    // Se o caracter não existir na numeração romana, a função
+        -:   48:    // CharacterValue retorna -1.
+        -:   49:
+      206:   50:    if(auxiliary_value == -1)
+        1:   51:      return -1;
+        -:   52:
+        -:   53:    else
+      205:   54:      sum += auxiliary_value;
         -:   55:
-      143:   56:      if (SubtractionPrecedence(last_char, current_char))
-       32:   57:        sum -= (2 * CharacterValue(last_char));
-        -:   58:
-      143:   59:      last_char = current_char;
-      143:   60:      last_char_count = 1;
+      205:   56:    if (current_char != last_char) {
+        -:   57:
+        -:   58:      // Condicional para tratar de casos de subtração.
+        -:   59:      // Note que o valor é subtraído duas vezes, pois ele havia sido somado
+        -:   60:      // anteriormente.
         -:   61:
-        -:   62:    }
-        -:   63:
-        -:   64:    else {
-        -:   65:
-       62:   66:      if (last_char_count != 3)
-       61:   67:        last_char_count++;
-        -:   68:
-        -:   69:      // Condicional para tratar de repetições excessivas de um caracter
-        -:   70:      // gerando um argumento inválido.
+      143:   62:      if (SubtractionPrecedence(last_char, current_char))
+       32:   63:        sum -= (2 * CharacterValue(last_char));
+        -:   64:
+      143:   65:      last_char = current_char;
+      143:   66:      last_char_count = 1;
+        -:   67:
+        -:   68:    }
+        -:   69:
+        -:   70:    else {
         -:   71:
-        -:   72:      else
-        1:   73:        return -1;
+       62:   72:      if (last_char_count != 3)
+       61:   73:        last_char_count++;
         -:   74:
-        -:   75:    }
-        -:   76:
-        -:   77:  }
-        -:   78:
-       39:   79:  return sum;
+        -:   75:      // Condicional para tratar de repetições excessivas de um caracter
+        -:   76:      // gerando um argumento inválido.
+        -:   77:
+        -:   78:      else
+        1:   79:        return -1;
         -:   80:
-        -:   81:}
+        -:   81:    }
         -:   82:
-        -:   83:/** Função auxiliar para verificar se um dado caracter pode ser repetido na
-        -:   84:    numeração romana.
-        -:   85:
-        -:   86:    Recebe como parâmetro um caracter qualquer. */
-        -:   87:
-      111:   88:int CanBeRepeated (char current_char) {
-        -:   89:
-      111:   90:  int char_value = CharacterValue(current_char);
+        -:   83:  }
+        -:   84:
+       39:   85:  return sum;
+        -:   86:
+        -:   87:}
+        -:   88:
+        -:   89:/** Função auxiliar para verificar se um dado caracter pode ser repetido na
+        -:   90:    numeração romana.
         -:   91:
-        -:   92:  // Para que o caracter possa ser repetido, seu valor deve ser uma potência
-        -:   93:  // de 10 exata.
-        -:   94:
-      287:   95:  while (char_value >= 10)
-       88:   96:    char_value = char_value/10;
+        -:   92:    \param current_char recebe um caracter.
+        -:   93:    \return A função retorna 1 caso current_char possa ser repetido e -1 caso
+        -:   94:    não possa ser repetido.
+        -:   95:
+        -:   96:     */
         -:   97:
-      111:   98:  if (char_value == 1)
-      109:   99:    return 1;
-        -:  100:
-        -:  101:  else
-        2:  102:    return 0;
-        -:  103:
-        -:  104:}
-        -:  105:
-        -:  106:/** Função auxiliar para retornar o valor de um dado caracter na numeração
-        -:  107:    romana.
-        -:  108:
-        -:  109:    Recebe como parâmetro um caracter qualquer.*/
+      111:   98:int CanBeRepeated (char current_char) {
+        -:   99:
+      111:  100:  int char_value = CharacterValue(current_char);
+        -:  101:
+        -:  102:  // Para que o caracter possa ser repetido, seu valor deve ser uma potência
+        -:  103:  // de 10 exata.
+        -:  104:
+      287:  105:  while (char_value >= 10)
+       88:  106:    char_value = char_value/10;
+        -:  107:
+      111:  108:  if (char_value == 1)
+      109:  109:    return 1;
         -:  110:
-     3537:  111:int CharacterValue (char current_char) {
-        -:  112:
-     3537:  113:  switch (current_char) {
-        -:  114:
-        -:  115:    case 'I':
-     1097:  116:      return 1;
-        -:  117:
-        -:  118:    case 'V':
-      294:  119:      return 5;
-        -:  120:
-        -:  121:    case 'X':
-      970:  122:      return 10;
+        -:  111:  else
+        2:  112:    return 0;
+        -:  113:
+        -:  114:}
+        -:  115:
+        -:  116:/** Função auxiliar para retornar o valor de um dado caracter na numeração
+        -:  117:    romana.
+        -:  118:
+        -:  119:    \param current_char recebe um caracter.
+        -:  120:    \return A função retorna o número inteiro equivalente a current_char caso
+        -:  121:    este seja um caracter presente na numeração romana e -1 caso contrário.
+        -:  122:    */
         -:  123:
-        -:  124:    case 'L':
-      198:  125:      return 50;
-        -:  126:
-        -:  127:    case 'C':
-      604:  128:      return 100;
-        -:  129:
-        -:  130:    case 'D':
-      115:  131:      return 500;
-        -:  132:
-        -:  133:    case 'M':
-      162:  134:      return 1000;
-        -:  135:
-        -:  136:    default:
-       97:  137:      return -1;
-        -:  138:
-        -:  139:  }
-        -:  140:
-        -:  141:}
+     3537:  124:int CharacterValue (char current_char) {
+        -:  125:
+     3537:  126:  switch (current_char) {
+        -:  127:
+        -:  128:    case 'I':
+     1097:  129:      return 1;
+        -:  130:
+        -:  131:    case 'V':
+      294:  132:      return 5;
+        -:  133:
+        -:  134:    case 'X':
+      970:  135:      return 10;
+        -:  136:
+        -:  137:    case 'L':
+      198:  138:      return 50;
+        -:  139:
+        -:  140:    case 'C':
+      604:  141:      return 100;
         -:  142:
-        -:  143:/** Função auxiliar para verificar se um dado par de caracteres constitui um caso
-        -:  144:    em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
+        -:  143:    case 'D':
+      115:  144:      return 500;
         -:  145:
-        -:  146:    Recebe como parâmetro dois caracteres que são sequenciais. */
-        -:  147:
-      356:  148:int SubtractionPrecedence (char precedent_char, char current_char) {
-        -:  149:
-        -:  150:  // Para que a precedência de subtração ocorra, a razão entre o caracter
-        -:  151:  // atual e o caracter que o precede deve ser 5 ou 10.
-        -:  152:
-      681:  153:  if (CharacterValue(current_char)/CharacterValue(precedent_char) == 5 ||
-      325:  154:  CharacterValue(current_char)/CharacterValue(precedent_char) == 10)
-       77:  155:    return 1;
-        -:  156:
-        -:  157:  else
-      279:  158:    return 0;
-        -:  159:
-        -:  160:}
-        -:  161:
-        -:  162:/** Função auxiliar para verificar se os caracteres anteriores em conjunto com o
-        -:  163:    caracter não constiuem um argumento inválido na numeração romana. 
+        -:  146:    case 'M':
+      162:  147:      return 1000;
+        -:  148:
+        -:  149:    default:
+       97:  150:      return -1;
+        -:  151:
+        -:  152:  }
+        -:  153:
+        -:  154:}
+        -:  155:
+        -:  156:/** Função auxiliar para verificar se um dado par de caracteres constitui um caso
+        -:  157:    em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
+        -:  158:
+        -:  159:    \param precedent_char recebe um caracter.
+        -:  160:    \param current_char recebe um caracter.
+        -:  161:    \return A função retorna 1 caso precedent_char e current_char constituam uma
+        -:  162:    precedência de subtração e -1 caso contrário.
+        -:  163:     */
         -:  164:
-        -:  165:    Recebe como parâmetros um vetor com os caracteres já processados e o
-        -:  166:    caracter que está sendo processado.*/
-        -:  167:
-      214:  168:int ValidPrecedences (char *past_characters, char current_char) {
+      356:  165:int SubtractionPrecedence (char precedent_char, char current_char) {
+        -:  166:
+        -:  167:  // Para que a precedência de subtração ocorra, a razão entre o caracter
+        -:  168:  // atual e o caracter que o precede deve ser 5 ou 10.
         -:  169:
-        -:  170:  unsigned int iterator;
-        -:  171:
-        -:  172:  // O primeiro caracter sempre é aceito.
+      681:  170:  if (CharacterValue(current_char)/CharacterValue(precedent_char) == 5 ||
+      325:  171:  CharacterValue(current_char)/CharacterValue(precedent_char) == 10)
+       77:  172:    return 1;
         -:  173:
-      214:  174:  if (strlen(past_characters) == 0)
-       49:  175:    return 1;
+        -:  174:  else
+      279:  175:    return 0;
         -:  176:
-        -:  177:  // Laço verifica todos os caracteres anteriores ao atual EXCETO o último.
-        -:  178:  // Essa implementação é justificada devido à precedência de subtração,
-        -:  179:  // uma excessão às regras que só ocorre entre caracteres sequenciais
-        -:  180:  // (Ou seja, o último caracter anterior e o atual).
+        -:  177:}
+        -:  178:
+        -:  179:/** Função auxiliar para verificar se os caracteres anteriores em conjunto com o
+        -:  180:    caracter não constiuem um argumento inválido na numeração romana.
         -:  181:
-      522:  182:  for (iterator = 0; iterator < (strlen(past_characters) - 1); iterator++) {
-        -:  183:
-      363:  184:    if (CharacterValue(past_characters[iterator]) < CharacterValue(current_char))
-        4:  185:      return 0;
+        -:  182:    \param past_characters recebe um vetor de caracteres.
+        -:  183:    \param current_char recebe um caracter.
+        -:  184:    \return A função retorna 1 caso current_char possa ser precedido por
+        -:  185:    past_characters e -1 caso contrário.
         -:  186:
-        -:  187:    else {
+        -:  187:    */
         -:  188:
-      359:  189:      if (CharacterValue(past_characters[iterator]) == CharacterValue(current_char)) {
+      214:  189:int ValidPrecedences (char *past_characters, char current_char) {
         -:  190:
-       48:  191:        if (!CanBeRepeated(current_char))
-        1:  192:          return 0;
-        -:  193:
-        -:  194:        // Condicional especial para tratar de casos em que um caracter
-        -:  195:        // é subtraído e depois tenta-se adicioná-lo ao número.
-        -:  196:        // (Algo que não pode acontecer).
+        -:  191:  unsigned int iterator;
+        -:  192:
+        -:  193:  // O primeiro caracter sempre é aceito.
+        -:  194:
+      214:  195:  if (strlen(past_characters) == 0)
+       49:  196:    return 1;
         -:  197:
-       54:  198:        if (SubtractionPrecedence(past_characters[iterator], past_characters[iterator + 1]) &&
-        7:  199:        !SubtractionPrecedence(past_characters[(strlen(past_characters) - 1)], current_char))
-        1:  200:          return 0;
-        -:  201:
-        -:  202:      }
-        -:  203:
-        -:  204:    }
-        -:  205:
-        -:  206:  }
+        -:  198:  // Laço verifica todos os caracteres anteriores ao atual EXCETO o último.
+        -:  199:  // Essa implementação é justificada devido à precedência de subtração,
+        -:  200:  // uma excessão às regras que só ocorre entre caracteres sequenciais
+        -:  201:  // (Ou seja, o último caracter anterior e o atual).
+        -:  202:
+      522:  203:  for (iterator = 0; iterator < (strlen(past_characters) - 1); iterator++) {
+        -:  204:
+      363:  205:    if (CharacterValue(past_characters[iterator]) < CharacterValue(current_char))
+        4:  206:      return 0;
         -:  207:
-        -:  208:  // Condicionais para tratar exclusivamente do último caracter.
+        -:  208:    else {
         -:  209:
-        -:  210:  // Condicional que trata do caso de subtração.
+      359:  210:      if (CharacterValue(past_characters[iterator]) == CharacterValue(current_char)) {
         -:  211:
-      159:  212:  if (SubtractionPrecedence(past_characters[iterator], current_char))
-       32:  213:    return 1;
+       48:  212:        if (!CanBeRepeated(current_char))
+        1:  213:          return 0;
         -:  214:
-      127:  215:  else if (CharacterValue(past_characters[iterator]) > CharacterValue(current_char))
-       63:  216:    return 1;
-        -:  217:
-       64:  218:  else if (CharacterValue(past_characters[iterator]) == CharacterValue(current_char)) {
-        -:  219:
-       63:  220:    if (CanBeRepeated(current_char))
-       62:  221:      return 1;
+        -:  215:        // Condicional especial para tratar de casos em que um caracter
+        -:  216:        // é subtraído e depois tenta-se adicioná-lo ao número.
+        -:  217:        // (Algo que não pode acontecer).
+        -:  218:
+       54:  219:        if (SubtractionPrecedence(past_characters[iterator], past_characters[iterator + 1]) &&
+        7:  220:        !SubtractionPrecedence(past_characters[(strlen(past_characters) - 1)], current_char))
+        1:  221:          return 0;
         -:  222:
-        -:  223:    else
-        1:  224:      return 0;
-        -:  225:
-        -:  226:  }
-        -:  227:
-        -:  228:  else
-        1:  229:    return 0;
+        -:  223:      }
+        -:  224:
+        -:  225:    }
+        -:  226:
+        -:  227:  }
+        -:  228:
+        -:  229:  // Condicionais para tratar exclusivamente do último caracter.
         -:  230:
-        -:  231:}
+        -:  231:  // Condicional que trata do caso de subtração.
+        -:  232:
+      159:  233:  if (SubtractionPrecedence(past_characters[iterator], current_char))
+       32:  234:    return 1;
+        -:  235:
+      127:  236:  else if (CharacterValue(past_characters[iterator]) > CharacterValue(current_char))
+       63:  237:    return 1;
+        -:  238:
+       64:  239:  else if (CharacterValue(past_characters[iterator]) == CharacterValue(current_char)) {
+        -:  240:
+       63:  241:    if (CanBeRepeated(current_char))
+       62:  242:      return 1;
+        -:  243:
+        -:  244:    else
+        1:  245:      return 0;
+        -:  246:
+        -:  247:  }
+        -:  248:
+        -:  249:  else
+        1:  250:    return 0;
+        -:  251:
+        -:  252:}

@@ -38,13 +38,13 @@ int RomanNumberConversion (char *roman_number) {
     if(!ValidPrecedences(past_characters, current_char))
       return -1;
 
-    // Armazena-se o caracter atual.
+    // Armazena-se o caractere atual.
 
     past_characters[iterator] = current_char;
 
     auxiliary_value = CharacterValue(current_char);
 
-    // Se o caracter não existir na numeração romana, a função
+    // Se o caractere não existir na numeração romana, a função
     // CharacterValue retorna -1.
 
     if(auxiliary_value == -1)
@@ -72,7 +72,7 @@ int RomanNumberConversion (char *roman_number) {
       if (last_char_count != 3)
         last_char_count++;
 
-      // Condicional para tratar de repetições excessivas de um caracter
+      // Condicional para tratar de repetições excessivas de um caractere
       // gerando um argumento inválido.
 
       else
@@ -86,10 +86,10 @@ int RomanNumberConversion (char *roman_number) {
 
 }
 
-/** Função auxiliar para verificar se um dado caracter pode ser repetido na
+/** Função auxiliar para verificar se um dado caractere pode ser repetido na
     numeração romana.
 
-    \param current_char recebe um caracter.
+    \param current_char recebe um caractere.
     \return A função retorna 1 caso current_char possa ser repetido e -1 caso
     não possa ser repetido.
 
@@ -99,7 +99,7 @@ int CanBeRepeated (char current_char) {
 
   int char_value = CharacterValue(current_char);
 
-  // Para que o caracter possa ser repetido, seu valor deve ser uma potência
+  // Para que o caractere possa ser repetido, seu valor deve ser uma potência
   // de 10 exata.
 
   while (char_value >= 10)
@@ -113,12 +113,12 @@ int CanBeRepeated (char current_char) {
 
 }
 
-/** Função auxiliar para retornar o valor de um dado caracter na numeração
+/** Função auxiliar para retornar o valor de um dado caractere na numeração
     romana.
 
-    \param current_char recebe um caracter.
+    \param current_char recebe um caractere.
     \return A função retorna o número inteiro equivalente a current_char caso
-    este seja um caracter presente na numeração romana e -1 caso contrário.
+    este seja um caractere presente na numeração romana e -1 caso contrário.
     */
 
 int CharacterValue (char current_char) {
@@ -156,16 +156,16 @@ int CharacterValue (char current_char) {
 /** Função auxiliar para verificar se um dado par de caracteres constitui um caso
     em que o primeiro deve ser subtraido (ao invés de somado) ao valor total.
 
-    \param precedent_char recebe um caracter.
-    \param current_char recebe um caracter.
+    \param precedent_char recebe um caractere.
+    \param current_char recebe um caractere.
     \return A função retorna 1 caso precedent_char e current_char constituam uma
     precedência de subtração e -1 caso contrário.
      */
 
 int SubtractionPrecedence (char precedent_char, char current_char) {
 
-  // Para que a precedência de subtração ocorra, a razão entre o caracter
-  // atual e o caracter que o precede deve ser 5 ou 10.
+  // Para que a precedência de subtração ocorra, a razão entre o caractere
+  // atual e o caractere que o precede deve ser 5 ou 10.
 
   if (CharacterValue(current_char)/CharacterValue(precedent_char) == 5 ||
   CharacterValue(current_char)/CharacterValue(precedent_char) == 10)
@@ -177,10 +177,10 @@ int SubtractionPrecedence (char precedent_char, char current_char) {
 }
 
 /** Função auxiliar para verificar se os caracteres anteriores em conjunto com o
-    caracter não constiuem um argumento inválido na numeração romana.
+    caractere não constiuem um argumento inválido na numeração romana.
 
     \param past_characters recebe um vetor de caracteres.
-    \param current_char recebe um caracter.
+    \param current_char recebe um caractere.
     \return A função retorna 1 caso current_char possa ser precedido por
     past_characters e -1 caso contrário.
 
@@ -190,7 +190,7 @@ int ValidPrecedences (char *past_characters, char current_char) {
 
   unsigned int iterator;
 
-  // O primeiro caracter sempre é aceito.
+  // O primeiro caractere sempre é aceito.
 
   if (strlen(past_characters) == 0)
     return 1;
@@ -212,7 +212,7 @@ int ValidPrecedences (char *past_characters, char current_char) {
         if (!CanBeRepeated(current_char))
           return 0;
 
-        // Condicional especial para tratar de casos em que um caracter
+        // Condicional especial para tratar de casos em que um caractere
         // é subtraído e depois tenta-se adicioná-lo ao número.
         // (Algo que não pode acontecer).
 
@@ -226,7 +226,7 @@ int ValidPrecedences (char *past_characters, char current_char) {
 
   }
 
-  // Condicionais para tratar exclusivamente do último caracter.
+  // Condicionais para tratar exclusivamente do último caractere.
 
   // Condicional que trata do caso de subtração.
 
