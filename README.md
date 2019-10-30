@@ -1,14 +1,22 @@
 # Roman numeral converter C library
 
+## Descrição
+
 Biblioteca de funções da linguagem C que permite a conversão de números romanos
-para números inteiros de 1 a 3000. Trabalho da disciplina de Métodos de
+de 1 a 3000 para números inteiros. Trabalho 02 da disciplina de Métodos de
 programação 2017/1 da Universidade de Brasília.
 
-#### Modo de uso
+## Integrantes
 
-1. Copie o arquivo roman_number_conversion.h para a sua pasta de includes.
+Nome                           | Matrícula
+------------------------------ | ----------
+André Filipe Caldas Laranjeira | 16/0023777
 
-2. Copie o arquivo roman_number_conversion.c para sua pasta de código fonte.
+## Modo de uso
+
+1. Copie o arquivo `roman_number_conversion.h` para a sua pasta de includes.
+
+2. Copie o arquivo `roman_number_conversion.c` para sua pasta de código fonte.
 
 3. Inclua esses arquivos no seu makefile, caso necessário.
 
@@ -19,19 +27,21 @@ programação 2017/1 da Universidade de Brasília.
  include "roman_number_conversion.h"
 ```
 
-5. Chame a função RomanNumberConversion() no seu código.
+5. Chame a função `RomanNumberConversion()` no seu código.
 
-#### Documentação da biblioteca
+## Documentação da biblioteca
 
-A documentação da biblioteca pode ser obtida através do programa doxygen. Basta ter o doxygen instalado e executar o seguinte comando na pasta do doxygen:
+A documentação da biblioteca pode ser obtida através do programa *doxygen*.
+Basta executar o seguinte comando para gerar a pasta *doc*, contendo a
+documentação da biblioteca:
 
 ```
 doxygen Doxyfile
 ```
 
-#### Testes realizados
+## Testes realizados
 
-A biblioteca desse repositório foi testada tanto pelo módulo de testes test_environment.c. Para gerar o executável com os testes, execute o seguinte comando:
+A biblioteca desse repositório foi testada tanto pelo módulo de testes `test_environment.c`. Para gerar o executável com os testes, execute o seguinte comando:
 
 ```
 make
@@ -45,4 +55,4 @@ Após executar esse arquivo, os arquivos objeto e o arquivo executável gerados 
 make clean
 ```
 
-Além disso, a extensão do arquivo executado de testes foi confirmada com a utilização do programa gcov. Os arquivos relacionados a esse programa podem ser encontrados na pasta src/gcov.
+Além disso, a cobertura do arquivo de testes foi confirmada com a utilização do programa *gcov*. Os arquivos relacionados a cobertura dos testes podem ser encontrados na pasta `src/gcov`.
